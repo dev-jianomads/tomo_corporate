@@ -91,6 +91,28 @@ npm run build
 npm run preview
 ```
 
+## 🧭 Git workflow
+
+For quick updates directly to `main`:
+
+```bash
+git add -A
+git commit -m "Describe your change"
+git push origin main
+```
+
+For a feature branch and pull request flow:
+
+```bash
+git checkout -b feature/my-change
+git add -A
+git commit -m "Describe your change"
+git push -u origin feature/my-change
+# open a PR to main in GitHub
+```
+
+Note: If Netlify is configured to deploy from `main`, pushing to `main` triggers a new deploy.
+
 ## 📦 Deployment
 
 The site is automatically deployed to Netlify at: https://merry-crumble-d6b196.netlify.app
