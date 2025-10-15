@@ -222,13 +222,13 @@ export default function LandingPage() {
           className="relative py-16 sm:py-20 min-h-screen bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url('/hero-bg.jpg'), url('/hero-bg.jpeg'), radial-gradient(circle at 50% 40%, rgba(255,137,0,0.25) 0%, rgba(255,0,85,0.20) 40%, rgba(0,0,0,0.15) 100%)",
+              "url('/hero-bg.jpg'), url('/hero-bg.jpeg'), radial-gradient(circle at 50% 40%, rgba(255,137,0,0.18) 0%, rgba(255,0,85,0.12) 40%, rgba(0,0,0,0.08) 100%)",
           }}
         >
           {/* overlay */}
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
+          <div className="absolute inset-0 bg-black/25" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[calc(100vh-4rem)] flex items-center">
+            <div className="max-w-3xl mx-auto text-center w-full">
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
                 Turn Chats Into Plans Instantly
               </h1>
