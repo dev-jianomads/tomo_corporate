@@ -218,18 +218,18 @@ export default function LandingPage() {
 
       <main>
         {/* Hero */}
-        <section className="py-16 sm:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
-                Turn Chats Into Plans. Instantly.
+        <section className="relative py-16 sm:py-20 min-h-screen bg-[url('/hero-bg.jpg')] bg-cover bg-center bg-no-repeat">
+          {/* overlay */}
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
+                Turn Chats Into Plans Instantly
               </h1>
-              <p className="mt-6 text-neutral-600 leading-relaxed max-w-2xl">
-                Stop juggling links and back-and-forth. Just tell Tomo what you
-                want — lunch with Alice, a call with the team — and it's in your
-                calendar.
+              <p className="mt-6 leading-relaxed max-w-2xl mx-auto text-neutral-100">
+                Stop juggling links and back-and-forth. Just tell Tomo what you want — lunch with Alice, a call with the team — and it's in your calendar.
               </p>
-              <div className="mt-8">
+              <div className="mt-8 flex justify-center">
                 <Button
                   href="https://cal.hellotomo.ai/welcome"
                   aria-label="Join the Tomo beta"
