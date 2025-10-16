@@ -226,7 +226,7 @@ export default function LandingPage() {
           }}
         >
           {/* overlay */}
-          <div className="absolute inset-0 bg-black/25" />
+          <div className="absolute inset-0 bg-black/5" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[calc(100vh-4rem)] flex items-center">
             <div className="max-w-3xl mx-auto text-center w-full">
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
