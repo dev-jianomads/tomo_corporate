@@ -303,32 +303,22 @@ export default function LandingPage() {
               </Card>
             </div>
 
-            {/* Video Placeholder */}
+            {/* Video */}
             <div className="mt-10 bg-gray-900 rounded-2xl p-8 relative overflow-hidden">
-              {/* Content */}
               <div className="relative">
-                {/* Video thumbnail */}
                 <div className="max-w-sm mx-auto">
-                  <img 
-                    src="/video thumbnail.jpg" 
-                    alt="Tomo chat interface video thumbnail"
+                  <video
                     className="w-full rounded-2xl shadow-2xl"
-                  />
-                </div>
-                
-                {/* Play button overlay */}
-                <div 
-                  className="absolute inset-0 bg-black/40 flex items-center justify-center cursor-pointer group hover:bg-black/50 transition-colors rounded-2xl"
-                  onClick={() => window.open('https://youtu.be/U--ZNq4RNrI?si=oRh9zvvHnV7PdAQm', '_blank')}
-                >
-                  <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                    <svg className="w-8 h-8 text-gray-800 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
+                    controls
+                    preload="metadata"
+                    poster="/video thumbnail.jpg"
+                  >
+                    <source src="/Tomo%20demo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
-              
+
               {/* Video label */}
               <div className="text-center mt-6">
                 <p className="text-white font-medium">Watch Tomo Demo</p>
