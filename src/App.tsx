@@ -267,8 +267,8 @@ export default function LandingPage() {
                     <CardTitle>Chat</CardTitle>
                   </div>
                   <CardDescription>
-                    Type it like you'd text a friend: "Let's do coffee with Sam
-                    next week."
+                    Type it like you’d text a friend: <em>“Let’s do coffee with
+                    Alice next Tuesday.”</em>
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -282,8 +282,9 @@ export default function LandingPage() {
                     <CardTitle>Propose</CardTitle>
                   </div>
                   <CardDescription>
-                    Tomo checks calendars, handles time zones, and suggests a
-                    nearby spot.
+                    Tomo checks availability across calendars, handles time
+                    zones, and suggests a time and place, even a great coffee
+                    spot nearby.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -297,7 +298,8 @@ export default function LandingPage() {
                     <CardTitle>Confirm</CardTitle>
                   </div>
                   <CardDescription>
-                    One tap and it's in everyone's calendar.
+                    One tap. Everyone gets the invite. No hunting for links, no
+                    forgotten follow-ups.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -330,11 +332,31 @@ export default function LandingPage() {
 
         <div className="border-t border-neutral-200/70" />
 
+        {/* Why scheduling feels harder than it should */}
+        <section className="py-16 sm:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+              Why scheduling feels harder than it should
+            </h2>
+            <p className="mt-6 max-w-3xl text-neutral-600 leading-relaxed">
+              Whether it’s a board meeting or a birthday dinner, getting people
+              aligned takes too many messages and too much cognitive energy.
+            </p>
+            <p className="mt-4 max-w-3xl text-neutral-600 leading-relaxed">
+              You jump between chat, email, calendars, time zones, and somehow
+              still don’t have a confirmed time or place.
+            </p>
+            <p className="mt-4 max-w-3xl text-neutral-600 leading-relaxed">
+              It’s slow, messy, mentally taxing — a hidden tax on focus.
+            </p>
+          </div>
+        </section>
+
         {/* Product Stats */}
         <section className="py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-              What early testers see
+              What early testers experience
             </h2>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -375,34 +397,24 @@ export default function LandingPage() {
               <div className="max-w-3xl">
                 <ul className="space-y-4">
                   <li>
-                    <span className="font-semibold">Agent-first.</span>{" "}
+                    <span className="font-semibold">Lives where you already talk.</span>{" "}
                     <span className="text-neutral-600">
-                      Tomo doesn't just sync calendars — it reasons about them.
+                      No new app. No setup. Just connect your calendar and
+                      schedule inside your everyday chats.
                     </span>
                   </li>
                   <li>
-                    <span className="font-semibold">Smarter choices.</span>{" "}
+                    <span className="font-semibold">Understands context, not just availability.</span>{" "}
                     <span className="text-neutral-600">
-                      Suggests the best times, not just open slots.
+                      Learns your habits, handles time zones, protects focus,
+                      and picks the moments that actually work.
                     </span>
                   </li>
                   <li>
-                    <span className="font-semibold">Context aware.</span>{" "}
+                    <span className="font-semibold">Goes beyond a booking link.</span>{" "}
                     <span className="text-neutral-600">
-                      Learns your habits and preferences.
-                    </span>
-                  </li>
-                  <li>
-                    <span className="font-semibold">Beyond time.</span>{" "}
-                    <span className="text-neutral-600">
-                      Finds coffee shops, lunch spots, and adds contextual
-                      weather recommendations so your plans fit the day.
-                    </span>
-                  </li>
-                  <li>
-                    <span className="font-semibold">Lightweight.</span>{" "}
-                    <span className="text-neutral-600">
-                      Connect your calendar, start chatting. No setup rituals.
+                      Suggests locations, remembers your preferences, follows up
+                      when needed.
                     </span>
                   </li>
                 </ul>
@@ -532,7 +544,8 @@ export default function LandingPage() {
               Ready to try?
             </h2>
             <p className="mt-4 text-neutral-600">
-              Join the beta today and see how effortless scheduling can feel.
+              Join the beta and feel what scheduling <em>should</em> feel like —
+              fast, human, and handled.
             </p>
             <div className="mt-8">
               <Button
