@@ -201,9 +201,9 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-dvh bg-white text-neutral-900">
+    <div className="min-h-dvh bg-[#e3e2d5] text-neutral-900">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-neutral-200/70">
+      <header className="sticky top-0 z-30 bg-[#e3e2d5]/80 backdrop-blur border-b border-neutral-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center">
             <img 
