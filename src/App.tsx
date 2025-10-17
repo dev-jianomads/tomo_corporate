@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { CheckCircle2, Shield } from "lucide-react";
 
 /* ============================
    Inlined shadcn-style UI bits
@@ -384,7 +385,7 @@ function LandingPage() {
 
               <Card className="text-center">
                 <CardHeader>
-                  <div className="text-3xl font-semibold">12 hours/week</div>
+                  <div className="text-3xl font-semibold">2 hours/week</div>
                   <CardDescription>saved by early testers</CardDescription>
                 </CardHeader>
               </Card>
@@ -540,13 +541,71 @@ function LandingPage() {
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
               Privacy, built-in
             </h2>
-            <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <li className="text-neutral-600">Only access what you approve</li>
-              <li className="text-neutral-600">Fully encrypted</li>
-              <li className="text-neutral-600">Never sold</li>
-              <li className="text-neutral-600">Never used to train models</li>
-            </ul>
-            <p className="mt-6 text-neutral-600">Trust is the foundation.</p>
+
+            {/* Lead promise */}
+            <p className="mt-6 max-w-3xl text-neutral-800 font-medium">
+              Tomo is designed to help — not to observe.
+            </p>
+
+            {/* Promise + Checklist card */}
+            <Card className="mt-6 max-w-3xl">
+              <CardHeader className="pb-2">
+                <CardTitle className="flex items-center gap-2">
+                  <Shield className="h-5 w-5 text-neutral-700" aria-hidden="true" />
+                  You stay in control
+                </CardTitle>
+                <CardDescription className="mt-3">
+                  It only sees and acts on what you explicitly allow. It can’t add anything to your
+                  calendar without your approval. It creates only what you confirm, and nothing else is touched.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3 text-neutral-700">
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5" aria-hidden="true" />
+                    <span>Acts only on what you allow; optional contact invites require your enablement.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-neutral-700">
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5" aria-hidden="true" />
+                    <span>Creates only what you confirm; the rest of your calendar is untouched.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-neutral-700">
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5" aria-hidden="true" />
+                    <span>Revoke access with one click; disconnecting removes all linked data immediately.</span>
+                  </li>
+                </ul>
+
+                <div className="mt-6">
+                  <h3 className="text-sm font-semibold text-neutral-900 flex items-center gap-2">
+                    <Shield className="h-4 w-4 text-neutral-700" aria-hidden="true" />
+                    Security Standards
+                  </h3>
+                  <ul className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
+                    <li className="flex items-center gap-2 text-neutral-700">
+                      <CheckCircle2 className="h-4 w-4 text-green-600" aria-hidden="true" />
+                      Encrypted in transit and at rest
+                    </li>
+                    <li className="flex items-center gap-2 text-neutral-700">
+                      <CheckCircle2 className="h-4 w-4 text-green-600" aria-hidden="true" />
+                      No data is ever sold
+                    </li>
+                    <li className="flex items-center gap-2 text-neutral-700">
+                      <CheckCircle2 className="h-4 w-4 text-green-600" aria-hidden="true" />
+                      No data is used to train models
+                    </li>
+                  </ul>
+
+                  <div className="mt-6">
+                    <Link
+                      to="/privacy"
+                      className="text-sm font-medium text-neutral-800 hover:text-black underline underline-offset-4"
+                    >
+                      Read full Privacy Policy →
+                    </Link>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
