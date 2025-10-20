@@ -2,6 +2,8 @@
 
 A modern, production-ready landing page for Tomo AI - the intelligent scheduling assistant that turns chats into plans instantly.
 
+Created by Ken, Marisa, and Geoff.
+
 ## 🎨 Design Philosophy
 
 This website embodies "Apple-level design aesthetics" with meticulous attention to detail, intuitive user experience, and clean, sophisticated visual presentation. The design focuses on:
