@@ -186,7 +186,7 @@ function LandingPage() {
       id: "q2",
       question: "Which calendars does Tomo support?",
       answer:
-        "Today: Google Calendar. Coming soon: Outlook, multi-calendar sync, and Slack/WhatsApp integration.",
+        "Today: Google Calendar. Coming soon: Outlook, multi-calendar sync, and Slack, Telegram, and WhatsApp integration.",
     },
     {
       id: "q3",
@@ -249,7 +249,7 @@ function LandingPage() {
                 Turn Chats Into Plans Instantly
               </h1>
               <p className="mt-6 leading-relaxed max-w-2xl mx-auto text-neutral-100">
-                Stop juggling links and back-and-forth. Just tell Tomo what you want — lunch with Alice, a call with the team — and it's in your calendar.
+                Stop juggling links and back-and-forth. Just tell Tomo what you want — lunch with Alice, a call with the team — in Slack, Telegram, or WhatsApp, and it's in your calendar.
               </p>
               <div className="mt-8 flex justify-center">
                 <Button
@@ -415,7 +415,7 @@ function LandingPage() {
                   <li>
                     <span className="font-semibold">Lives where you already talk.</span>{" "}
                     <span className="text-neutral-600">
-                      No new app. No setup. Just connect your calendar and
+                      Works in Slack, Telegram, and WhatsApp — wherever your team already communicates. No new app. No setup. Just connect your calendar and
                       schedule inside your everyday chats.
                     </span>
                   </li>
@@ -677,7 +677,7 @@ function TermsPage() {
 
               <h2>2. Description of the Service</h2>
               <p>2.1 Hello Tomo is an AI-powered scheduling assistant that helps users coordinate meetings, manage availability, and integrate calendars and messaging platforms.</p>
-              <p>2.2 The Service may connect to third-party services such as Google Calendar, Outlook, WhatsApp, Slack, or Telegram. You acknowledge that such integrations are subject to the terms of those third-party providers.</p>
+              <p>2.2 The Service may connect to third-party services such as Google Calendar, Outlook, Slack, Telegram, or WhatsApp. You acknowledge that such integrations are subject to the terms of those third-party providers.</p>
               <p>2.3 JIA may modify or discontinue features at any time, with or without notice.</p>
 
               <h2>3. Account Registration and Security</h2>
@@ -824,7 +824,7 @@ function PrivacyPage() {
 
               <h3>2.3 Communications Data</h3>
               <ul>
-                <li>Messages exchanged with Hello Tomo (via web app, email, WhatsApp, Telegram, Slack etc.).</li>
+                <li>Messages exchanged with Hello Tomo (via web app, email, Slack, Telegram, WhatsApp etc.).</li>
                 <li>Support requests and customer service records.</li>
               </ul>
 
