@@ -186,7 +186,7 @@ function LandingPage() {
       id: "q2",
       question: "Which calendars does Tomo support?",
       answer:
-        "Today: Google Calendar. Coming soon: Outlook, multi-calendar sync, and Slack, Telegram, and WhatsApp integration.",
+        "Today: Google Calendar. Coming soon: Outlook, multi-calendar sync, and Slack, Telegram, and WhatsApp (coming soon) integration.",
     },
     {
       id: "q3",
@@ -249,7 +249,7 @@ function LandingPage() {
                 Turn Chats Into Plans Instantly
               </h1>
               <p className="mt-6 leading-relaxed max-w-2xl mx-auto text-neutral-100">
-                Stop juggling links and back-and-forth. Just tell Tomo what you want — lunch with Alice, a call with the team — in Slack, Telegram, or WhatsApp, and it's in your calendar.
+                Stop juggling links and back-and-forth. Just tell Tomo what you want — lunch with Alice, a call with the team — in Slack, Telegram, or WhatsApp (coming soon), and it's in your calendar.
               </p>
               <div className="mt-8 flex justify-center">
                 <Button
@@ -415,7 +415,7 @@ function LandingPage() {
                   <li>
                     <span className="font-semibold">Lives where you already talk.</span>{" "}
                     <span className="text-neutral-600">
-                      Works in Slack, Telegram, and WhatsApp — wherever your team already communicates. No new app. No setup. Just connect your calendar and
+                      Works in Slack, Telegram, and WhatsApp (coming soon) — wherever your team already communicates. No new app. No setup. Just connect your calendar and
                       schedule inside your everyday chats.
                     </span>
                   </li>
