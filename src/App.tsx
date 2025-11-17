@@ -196,6 +196,12 @@ function LandingPage() {
     },
     {
       id: "q4",
+      question: "How does Tomo understand context?",
+      answer:
+        "Tomo can read your emails (with your permission) to understand meeting context, project details, and relationships. This helps it suggest better times and locations. You control what Tomo can access.",
+    },
+    {
+      id: "q5",
       question: "Is my data private?",
       answer:
         "Yes. Your calendar data is encrypted, only accessed with your permission, never sold, and never used to train models.",
@@ -423,7 +429,7 @@ function LandingPage() {
                     <span className="font-semibold">Understands context, not just availability.</span>{" "}
                     <span className="text-neutral-600">
                       Learns your habits, handles time zones, protects focus,
-                      and picks the moments that actually work.
+                      and picks the moments that actually work. With optional email access, it understands project context and relationships to make smarter suggestions.
                     </span>
                   </li>
                   <li>
@@ -555,7 +561,7 @@ function LandingPage() {
                   You stay in control
                 </CardTitle>
                 <CardDescription className="mt-3">
-                  It only sees and acts on what you explicitly allow. It can’t add anything to your
+                  It only sees and acts on what you explicitly allow. Email access is optional — you choose whether to grant permission for Tomo to read emails and add context. It can't add anything to your
                   calendar without your approval. It creates only what you confirm, and nothing else is touched.
                 </CardDescription>
               </CardHeader>
