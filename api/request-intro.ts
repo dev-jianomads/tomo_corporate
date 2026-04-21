@@ -22,8 +22,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ ok: false, error: "Method not allowed" });
   }
 
-  const apiKey = process.env.LOOPS_API_KEY;
-  const transactionalId = process.env.LOOPS_TRANSACTIONAL_ID;
+  const apiKey = process.env.LOOPS_API_KEY?.trim();
+  const transactionalId = process.env.LOOPS_TRANSACTIONAL_ID?.trim();
   const notifyEmail =
     process.env.INTRO_NOTIFY_EMAIL || "geoffrey@tomosolutions.ai";
 
