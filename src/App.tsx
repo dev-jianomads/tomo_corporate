@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 import { CheckCircle2, Shield } from "lucide-react";
 
 /* ============================
@@ -775,7 +775,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route
+          path="/"
+          element={<Navigate to="/tomo_private_circle_v25.html" replace />}
+        />
+        <Route path="/scheduling" element={<LandingPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
       </Routes>

@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fat Middle · tomo. Journal</title>
+<meta name="description" content="The 40% of raises that don't die from rejection. They die from drift.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canvas:#F9F6EF;
+  --card-warm:#F4EFE4;
+  --ink:#1C2B3A;
+  --navy:#1C2B3A;
+  --body:#4A5568;
+  --mute:#8898AA;
+  --whisper:#B4BCC6;
+  --amber:#C9933A;
+  --amber-deep:#A87826;
+  --rule:#D5D9E0;
+  --serif:'Newsreader',serif;
+  --sans:'Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --logo:'Fraunces',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--canvas);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;line-height:1.5;font-weight:400;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  min-height:100vh;
+}
+
+/* ============ NAV ============ */
+.nav{
+  background:var(--canvas);
+  border-bottom:1px solid var(--rule);
+  padding:22px 48px;
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:blur(8px);
+  background-color:rgba(249,246,239,0.92);
+}
+.nav-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.nav-logo{
+  font-family:var(--logo);
+  font-variation-settings:"opsz" 48;
+  font-weight:500;font-size:22px;
+  letter-spacing:-0.03em;color:var(--ink);
+  text-decoration:none;
+}
+.nav-logo .dot{color:var(--amber-deep);}
+.nav-back{
+  font-size:13px;color:var(--ink);
+  letter-spacing:-0.003em;text-decoration:none;
+  transition:color 160ms;
+}
+.nav-back:hover{color:var(--amber-deep);}
+
+/* ============ ARTICLE HEAD ============ */
+.article{
+  max-width:720px;margin:0 auto;
+  padding:72px 48px 40px;
+}
+.article-meta{
+  display:flex;align-items:center;gap:16px;
+  margin-bottom:28px;
+}
+.article-num{
+  font-family:var(--mono);
+  font-size:11px;letter-spacing:0.22em;
+  color:var(--amber-deep);font-weight:500;
+}
+.article-cat{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--whisper);
+}
+.article-cat::before{content:"·";margin-right:16px;color:var(--whisper);}
+
+.article-h{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 60;
+  font-weight:500;font-size:56px;line-height:1.05;
+  color:var(--ink);letter-spacing:-0.02em;
+  margin-bottom:24px;
+}
+.article-h em{font-style:italic;color:var(--amber-deep);font-weight:400;}
+
+.article-dek{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 22;
+  font-weight:400;font-size:22px;line-height:1.5;
+  color:var(--body);letter-spacing:-0.01em;font-style:italic;
+  margin-bottom:40px;max-width:620px;
+}
+
+.article-byline{
+  display:flex;align-items:center;gap:14px;
+  padding:20px 0;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  margin-bottom:56px;
+}
+.byline-name{
+  font-size:13px;font-weight:500;color:var(--ink);
+  letter-spacing:-0.003em;
+}
+.byline-meta{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--mute);
+}
+.byline-sep{color:var(--whisper);font-size:10px;}
+
+/* ============ BODY ============ */
+.article-body{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 18;
+  font-size:19px;line-height:1.7;
+  color:var(--ink);letter-spacing:-0.005em;
+}
+.article-body p{margin-bottom:24px;}
+.article-body > p:first-of-type::first-letter{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 96;
+  font-weight:500;
+  float:left;font-size:72px;line-height:0.85;
+  margin:10px 10px -4px 0;
+  color:var(--amber-deep);
+}
+.article-body h2{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 36;
+  font-weight:500;font-size:30px;line-height:1.2;
+  color:var(--ink);letter-spacing:-0.015em;
+  margin-top:56px;margin-bottom:20px;
+}
+.article-body h3{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 24;
+  font-weight:500;font-size:22px;line-height:1.3;
+  color:var(--ink);letter-spacing:-0.01em;
+  margin-top:40px;margin-bottom:14px;
+}
+.article-body strong{font-weight:600;color:var(--ink);}
+.article-body em{font-style:italic;color:var(--amber-deep);}
+.article-body blockquote{
+  border-left:3px solid var(--amber);
+  padding:8px 0 8px 28px;
+  margin:36px 0;
+  font-style:italic;
+  font-size:22px;line-height:1.55;
+  color:var(--body);
+}
+.article-body a{color:var(--amber-deep);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+
+/* Stub state — clearly marked placeholder */
+.stub-notice{
+  margin:48px 0 0;padding:24px 28px;
+  background:var(--card-warm);
+  border:1px dashed var(--amber);
+  border-left:3px solid var(--amber);
+  border-radius:6px;
+  font-family:var(--sans);
+  font-size:14px;line-height:1.6;color:var(--body);
+  font-style:normal;letter-spacing:-0.003em;
+}
+.stub-notice strong{color:var(--ink);font-weight:600;display:block;margin-bottom:6px;font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;}
+
+/* ============ FOOTER ============ */
+.article-foot{
+  max-width:720px;margin:80px auto 0;
+  padding:48px 48px 80px;
+  border-top:1px solid var(--rule);
+}
+.next-piece{
+  display:flex;flex-direction:column;gap:10px;
+  padding:28px 32px;
+  background:var(--card-warm);
+  border:1px solid var(--rule);border-radius:8px;
+  text-decoration:none;color:inherit;
+  transition:transform 220ms ease, border-color 220ms ease;
+  margin-bottom:40px;
+}
+.next-piece:hover{transform:translateY(-2px);border-color:var(--amber-deep);}
+.next-piece-eye{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+}
+.next-piece-title{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 28;
+  font-weight:500;font-size:24px;line-height:1.2;
+  color:var(--ink);letter-spacing:-0.015em;
+}
+.next-piece-arrow{
+  font-family:var(--mono);
+  font-size:11px;letter-spacing:0.14em;
+  color:var(--amber-deep);font-weight:500;
+  margin-top:4px;
+}
+
+.back-to-home{
+  text-align:center;margin-top:40px;
+}
+.back-to-home a{
+  font-size:13px;color:var(--mute);
+  letter-spacing:-0.003em;text-decoration:none;
+  transition:color 160ms;
+}
+.back-to-home a:hover{color:var(--amber-deep);}
+
+/* ============ RESPONSIVE ============ */
+
+/* Article additions (v23+) */
+.article-figure{
+  margin:48px -40px;
+  background:var(--card-warm);
+  padding:32px;
+  border-radius:4px;
+}
+.article-figure img{
+  display:block;max-width:100%;height:auto;margin:0 auto;
+  border-radius:2px;
+}
+.article-figure figcaption{
+  font-family:var(--sans);
+  font-size:13px;font-style:italic;
+  color:var(--mute);
+  text-align:center;margin-top:18px;
+  letter-spacing:-0.003em;line-height:1.5;
+}
+
+.article-table-wrap{
+  margin:40px 0;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.article-table{
+  width:100%;
+  border-collapse:collapse;
+  font-family:var(--sans);
+  font-size:14px;line-height:1.5;
+  color:var(--ink);
+}
+.article-table th,.article-table td{
+  padding:14px 16px;
+  text-align:left;
+  border-bottom:1px solid var(--rule);
+}
+.article-table th{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+  font-weight:500;color:var(--amber-deep);
+  vertical-align:bottom;
+  border-bottom:1.5px solid var(--amber-deep);
+}
+.article-table th .th-sub{
+  display:inline-block;margin-top:4px;
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:-0.003em;
+  text-transform:none;color:var(--mute);font-weight:400;
+}
+.article-table tbody tr:hover{background:rgba(201,147,58,0.04);}
+.article-table td:first-child{font-weight:500;}
+
+.article-callout{
+  margin:40px 0;
+  padding:28px 32px;
+  background:var(--card-warm);
+  border-left:3px solid var(--amber);
+  border-radius:0 4px 4px 0;
+}
+.article-callout .callout-eye{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  margin-bottom:12px;
+}
+.article-callout p{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 18;
+  font-size:17px;line-height:1.6;color:var(--ink);
+  margin-bottom:12px;
+}
+.article-callout p:last-child{margin-bottom:0;font-size:15px;color:var(--body);}
+
+.article-body ul.article-list,
+.article-body ol.article-list{
+  margin:20px 0 28px 0;
+  padding-left:24px;
+}
+.article-body .article-list li{
+  margin-bottom:14px;
+  padding-left:6px;
+  line-height:1.6;
+}
+.article-body .article-list li::marker{color:var(--amber-deep);}
+
+.article-divider{
+  border:none;
+  height:1px;
+  background:var(--rule);
+  margin:48px 0 32px 0;
+}
+.article-coda{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 18;
+  font-size:17px;line-height:1.7;
+  color:var(--body);
+  text-align:center;
+  max-width:560px;margin:0 auto;
+}
+
+
+/* Signals piece additions (v24+) */
+
+/* Callout variant: caution (for warm ghosting warning) */
+.article-callout.callout-caution{
+  border-left-color:var(--oxblood, #6B2B2B);
+  background:rgba(107,43,43,0.04);
+}
+.article-callout.callout-caution .callout-eye{
+  color:var(--oxblood, #6B2B2B);
+}
+
+/* Signal hierarchy table — extended with category break rows */
+.article-table-signals td{
+  vertical-align:top;
+  font-size:13.5px;line-height:1.55;
+}
+.article-table-signals .signal-channel{
+  font-family:var(--mono);
+  font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  display:block;margin-bottom:4px;
+}
+.article-table-signals .signal-name{
+  font-family:var(--serif);
+  font-weight:500;font-size:15px;
+  color:var(--ink);letter-spacing:-0.005em;
+}
+.article-table-signals tbody tr.table-category-row{
+  background:transparent;
+}
+.article-table-signals tbody tr.table-category-row:hover{
+  background:transparent;
+}
+.article-table-signals tbody tr.table-category-row td{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  padding:22px 16px 10px 16px;
+  border-bottom:1px solid var(--amber);
+  background:rgba(201,147,58,0.04);
+}
+
+/* Decay map — emphasize the threshold number */
+.article-table-decay .threshold-num{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 18;
+  font-weight:500;
+  font-size:17px;
+  color:var(--amber-deep);
+  white-space:nowrap;
+}
+
+/* Three-touch sequence — protocol block */
+.three-touch{
+  margin:40px 0;
+  padding:36px 36px 32px 36px;
+  background:var(--card-warm);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  position:relative;
+}
+.three-touch-head{
+  font-family:var(--mono);
+  font-size:11px;letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--rule);
+  margin-bottom:28px;
+}
+.touch-step{
+  margin-bottom:26px;
+  padding-left:18px;
+  border-left:2px solid var(--amber);
+}
+.touch-step:last-of-type{margin-bottom:28px;}
+.touch-num{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:600;
+  margin-bottom:6px;
+  display:flex;align-items:baseline;gap:14px;
+}
+.touch-day{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--mute);
+  font-weight:400;
+}
+.touch-title{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 20;
+  font-weight:500;font-size:18px;
+  color:var(--ink);letter-spacing:-0.008em;
+  margin-bottom:8px;
+}
+.touch-step p{
+  font-size:15px;line-height:1.6;color:var(--body);
+  margin:0;
+}
+.touch-outcomes{
+  margin-top:14px;
+  padding:22px 24px;
+  background:rgba(201,147,58,0.06);
+  border-radius:3px;
+}
+.touch-outcomes-head{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  margin-bottom:14px;
+}
+.touch-outcomes-list{
+  list-style:none;padding:0;margin:0;
+  display:flex;flex-direction:column;gap:10px;
+}
+.touch-outcomes-list li{
+  font-family:var(--serif);
+  font-size:15px;line-height:1.55;color:var(--ink);
+  display:flex;align-items:baseline;gap:12px;
+}
+.outcome-mark{
+  font-family:var(--mono);
+  font-size:14px;font-weight:600;
+  width:18px;display:inline-block;
+  flex-shrink:0;
+}
+.outcome-mark.outcome-up{color:var(--amber-deep);}
+.outcome-mark.outcome-flat{color:var(--mute);}
+.outcome-mark.outcome-down{color:var(--oxblood, #6B2B2B);}
+
+/* Coda sub-line — the Momentum cross-link after the TOMO close */
+.article-coda-sub{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 16;
+  font-style:italic;
+  font-size:15px;line-height:1.7;
+  color:var(--mute);
+  text-align:center;
+  max-width:560px;margin:20px auto 0 auto;
+}
+.article-coda-sub a{
+  color:var(--amber-deep);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+  font-style:normal;
+}
+.article-coda-sub em{color:var(--ink);}
+
+/* The main coda for Signals needs to NOT be italic (since it's a CTA sentence) */
+.article-coda{font-style:normal;color:var(--ink);font-weight:400;}
+.article-coda a{
+  color:var(--amber-deep);
+  font-weight:500;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+
+
+/* Momentum piece additions (v25+) */
+
+/* Reader-navigation table of contents */
+.article-toc{
+  max-width:640px;
+  margin:0 auto 60px auto;
+  padding:22px 28px;
+  background:var(--card-warm);
+  border:1px solid var(--rule);
+  border-radius:4px;
+}
+.article-toc .toc-eye{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  margin-bottom:12px;
+}
+.article-toc ol.toc-list{
+  list-style:none;padding:0;margin:0;
+  counter-reset:toc;
+  display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;
+}
+.article-toc ol.toc-list li{
+  counter-increment:toc;
+  display:flex;align-items:baseline;gap:10px;
+  font-family:var(--serif);
+  font-size:14.5px;line-height:1.45;
+}
+.article-toc ol.toc-list li::before{
+  content:counter(toc, decimal-leading-zero);
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.1em;
+  color:var(--amber-deep);
+  font-weight:500;
+  flex-shrink:0;
+}
+.article-toc ol.toc-list a{
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:border-color 150ms;
+}
+.article-toc ol.toc-list a:hover{border-bottom-color:var(--amber);}
+
+/* Epigraph — the momentum definition. Large-format pull-out at section level */
+.article-body blockquote.article-epigraph{
+  margin:36px 0 40px 0;
+  padding:36px 40px 32px 40px;
+  border-top:2px solid var(--ink);
+  border-bottom:1px solid var(--rule);
+  border-left:none;
+  background:transparent;
+  font-style:normal;
+  font-size:inherit;
+  position:relative;
+}
+.article-epigraph p:first-child{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 28;
+  font-weight:500;
+  font-style:italic;
+  font-size:26px;line-height:1.3;
+  color:var(--ink);letter-spacing:-0.015em;
+  margin:0 0 18px 0;
+}
+.article-epigraph p.epigraph-gloss{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 16;
+  font-weight:400;
+  font-style:normal;
+  font-size:15.5px;line-height:1.65;
+  color:var(--body);
+  margin:0;
+}
+
+/* External pull-quote (Paul Graham, Breslow, etc.) */
+.article-quote{
+  margin:32px 0;
+  padding:20px 32px;
+  border-left:3px solid var(--amber);
+  background:transparent;
+}
+.article-quote p{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:17px;line-height:1.6;
+  color:var(--ink);
+  margin:0 0 10px 0;
+}
+.article-quote cite{
+  display:block;
+  font-family:var(--mono);
+  font-style:normal;
+  font-size:11px;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+}
+
+/* Five-drivers table — emphasis row for "Momentum" (last row) */
+.article-table .table-emphasis-row{
+  background:rgba(201,147,58,0.07);
+}
+.article-table .table-emphasis-row:hover{
+  background:rgba(201,147,58,0.1);
+}
+.article-table .table-emphasis-row td{
+  border-top:1.5px solid var(--amber);
+}
+
+/* Numbers table — emphasize Momentum column */
+.article-table-momentum .col-momentum{
+  background:rgba(201,147,58,0.06);
+  color:var(--amber-deep);
+  font-weight:500;
+}
+.article-table-momentum thead th.col-momentum{
+  color:var(--amber-deep);
+  border-bottom-color:var(--amber-deep);
+  border-bottom-width:2px;
+}
+.article-table-momentum .col-momentum strong{
+  color:var(--amber-deep);
+}
+.article-table-momentum .table-total-row{
+  border-top:2px solid var(--ink);
+}
+.article-table-momentum .table-total-row td{
+  padding-top:18px;padding-bottom:18px;
+  font-weight:500;
+  border-bottom:none;
+}
+.article-table-momentum .table-total-row .col-momentum strong{
+  font-size:16px;
+}
+
+/* Calendar table — the "When" column is a temporal marker */
+.article-table-calendar td{
+  vertical-align:top;
+  padding:22px 16px;
+}
+.article-table-calendar td:first-child{
+  width:180px;
+  padding-right:24px;
+}
+.article-table-calendar .calendar-when{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 22;
+  font-weight:500;
+  font-size:19px;line-height:1.2;
+  color:var(--amber-deep);letter-spacing:-0.01em;
+  display:block;
+}
+.article-table-calendar .calendar-when-open{
+  color:var(--ink);
+}
+.article-table-calendar td p{
+  font-size:14.5px;line-height:1.6;
+  margin:0 0 10px 0;
+  color:var(--body);
+}
+.article-table-calendar td p:last-child{margin-bottom:0;}
+.article-table-calendar tr.calendar-open-row{
+  background:rgba(28,43,58,0.03);
+}
+.article-table-calendar tr.calendar-open-row td{
+  border-top:1.5px solid var(--ink);
+}
+
+/* Mobile */
+@media (max-width:768px){
+  .article-toc{padding:18px 20px;}
+  .article-toc ol.toc-list{grid-template-columns:1fr;gap:8px;}
+  .article-epigraph{padding:26px 20px 22px 20px;}
+  .article-epigraph p:first-child{font-size:20px;}
+  .article-quote{padding:16px 20px;}
+  .article-quote p{font-size:15px;}
+  .article-table-calendar td:first-child{width:auto;}
+  .article-table-calendar .calendar-when{font-size:16px;}
+  .article-table-calendar td{padding:16px 10px;}
+}
+
+@media (max-width:768px){
+  .article-table-signals{font-size:12.5px;}
+  .article-table-signals td{padding:12px 10px;}
+  .three-touch{padding:24px;}
+  .touch-step{padding-left:14px;}
+  .touch-outcomes{padding:18px 18px;}
+}
+
+@media (max-width:768px){
+  .article-figure{margin:32px -24px;padding:20px;}
+  .article-table{font-size:13px;}
+  .article-table th,.article-table td{padding:10px 12px;}
+  .article-callout{padding:22px 24px;}
+  .article-callout p{font-size:16px;}
+}
+
+@media (max-width:768px){
+  .nav{padding:18px 24px;}
+  .article{padding:48px 24px 32px;}
+  .article-h{font-size:38px;}
+  .article-dek{font-size:18px;}
+  .article-body{font-size:17px;}
+  .article-body p:first-of-type::first-letter{font-size:58px;margin:6px 8px -2px 0;}
+  .article-foot{padding:40px 24px 64px;margin-top:60px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="tomo_private_circle_v25.html" class="nav-logo">tomo<span class="dot">.</span></a>
+    <a href="tomo_private_circle_v25.html#journal" class="nav-back">← Back to The Journal</a>
+  </div>
+</nav>
+
+<article class="article">
+
+  <div class="article-meta">
+    <span class="article-num">N°03</span>
+    <span class="article-cat">The Journal · Strategy</span>
+  </div>
+
+  <h1 class="article-h">The <em>Momentum Raise.</em></h1>
+
+  <p class="article-dek">Why some raises close themselves, and what it takes to engineer that outcome.</p>
+
+  <div class="article-byline">
+    <span class="byline-name">Geoffrey Chen</span>
+    <span class="byline-sep">·</span>
+    <span class="byline-meta">Founder</span>
+    <span class="byline-sep">·</span>
+    <span class="byline-meta">April 2026</span>
+  </div>
+
+  <nav class="article-toc" aria-label="In this piece">
+    <div class="toc-eye">In this piece</div>
+    <ol class="toc-list">
+      <li><a href="#performance">Performance is not everything</a></li>
+      <li><a href="#luck">A note on luck and control</a></li>
+      <li><a href="#definition">What momentum actually is</a></li>
+      <li><a href="#drivers">The five drivers of capital formation</a></li>
+      <li><a href="#activation">What activates momentum</a></li>
+      <li><a href="#numbers">The numbers: standard vs. momentum raise</a></li>
+      <li><a href="#calendar">The front-loading calendar</a></li>
+      <li><a href="#hedge-funds">The hedge fund complication</a></li>
+      <li><a href="#infrastructure">The infrastructure</a></li>
+    </ol>
+  </nav>
+
+  <div class="article-body">
+
+    <h2 id="performance">Performance is not everything</h2>
+
+    <p>This may seem counterintuitive, but the best raises I have seen as a fund manager were not always the ones with the strongest performance or best investment teams. Some closed in under a year on a pipeline that should have taken two.</p>
+
+    <p>The later commitments arrived faster than the earlier ones. LPs who had been sitting on their hands for months suddenly moved within weeks of each other. At a certain point the raise stopped feeling like selling and started to feel like managing capacity.</p>
+
+    <p>The worst raises I have seen have also had something in common. Not bad performance or a weak story. These perfectly good funds were always two conversations away from the next commitment, every single month for 18 months. Unsurprisingly, many of them never closed at target. Most of these managers never fully understood why.</p>
+
+    <p><strong>The difference between those two kinds of raises is momentum. And momentum is something that you can build.</strong></p>
+
+    <h2 id="luck">A note on luck and control</h2>
+
+    <p>Before anything else: momentum is <em>partially</em> circumstantial. You cannot manufacture a macro tailwind. You cannot force an LP, no matter how strong your relationship may be with them, to commit. You cannot control whether your strategy is in or out of favour this quarter.</p>
+
+    <p>The analogy I like to use here is sailing, not chess. You cannot control the wind. But you can control whether your boat is positioned to catch it, whether your crew is ready when it arrives, and whether you move fast enough to use the conditions before they change. The sailors who consistently win are not the luckiest. They are the ones who have done the most to be ready when luck breaks in their direction.</p>
+
+    <p>What follows is about that preparation. The mechanisms that create momentum are real, observable, and somewhat within your control. Managers who understand these mechanisms are better positioned than those who leave things to circumstance.</p>
+
+    <h2 id="definition">What momentum actually is</h2>
+
+    <p>Momentum in a capital raise has a precise definition that few practitioners have actually articulated. Here is how I like to define it.</p>
+
+    <blockquote class="article-epigraph">
+      <p>Momentum is the state in which LP commitments attract further LP commitments without proportional additional effort from the GP.</p>
+      <p class="epigraph-gloss">A raise without momentum is linear. Every commitment costs roughly the same effort as the last one. A raise with momentum is non-linear. Each commitment makes the next one easier. That is the difference between closing in 12 months and closing in 22 months &mdash; the average in 2026.</p>
+    </blockquote>
+
+    <p>The mechanism behind this is straightforward. LPs are not making independent decisions. They are making decisions within a social context. They watch what other credible investors are doing. They ask you &ldquo;who else is in?&rdquo; not because they are unsophisticated but because peer group diligence is rational. If an endowment they respect has done the work and committed, they do not need to start from zero.</p>
+
+    <p>Paul Graham, co-founder of Y Combinator, identified this dynamic from the venture world more than 15 years ago.</p>
+
+    <blockquote class="article-quote">
+      <p>By far the biggest influence on investors' opinions of a startup is the opinion of other investors. There are very few who simply decide for themselves.</p>
+      <cite>Paul Graham, co-founder of Y Combinator</cite>
+    </blockquote>
+
+    <p>He was writing about startups raising from VCs. The mechanism is identical in institutional LP fundraising. The LPs who ask &ldquo;who else is in?&rdquo; are not being lazy or stupid. They are responding to a genuine signal.</p>
+
+    <p>Ryan Breslow, one of Silicon Valley's most studied fundraisers (author of <em>Fundraising</em>, which is canonical in founder circles), arrived at the same conclusion independently.</p>
+
+    <blockquote class="article-quote">
+      <p>Fundraising is a matter of momentum.</p>
+      <cite>Ryan Breslow</cite>
+    </blockquote>
+
+    <p>He built his entire fundraising process around manufacturing momentum before a raise opens, not waiting for it to appear during one.</p>
+
+    <p>What these practitioners identified from their context, and what I have observed across 20 years of institutional fundraising, is the same underlying human behaviour. The question is whether you understand the specific mechanisms that activate it in your context.</p>
+
+    <h3>Is momentum the right goal for every single raise?</h3>
+
+    <p>No. And being honest about this is important. There are two other paths to a successful raise.</p>
+
+    <ul class="article-list">
+      <li><strong>Relationship capital.</strong> A fund on its fourth or fifth cycle with a deep existing LP base and strong renewal rates is not running a momentum campaign. It is managing long-term relationships and a renewal process. The social proof, the anchor effect, and the credibility signals are already embedded in the relationship history. The raise is less a fundraising process and more a re-subscription exercise.</li>
+      <li><strong>Performance gravity.</strong> A fund with genuinely exceptional, visible performance in a strategy LPs are actively seeking can raise without deliberate momentum engineering because performance itself generates the inbound signal. This path is real but not reliably repeatable. You cannot plan around it.</li>
+    </ul>
+
+    <p>Deliberately engineering a momentum raise is most valuable for managers who do not yet have the deep renewal base of the relationship capital path and cannot rely on performance gravity alone. That describes most managers in the early and middle stages of their fundraising history. If that is where you are, the question is not whether to pursue momentum. It is whether you are leaving meaningful close speed and certainty on the table by not engineering the conditions that would create it.</p>
+
+    <p>Most managers do not choose the slow and steady approach deliberately. They drift into it because they do not have visibility into which LPs are heating, they do not have the anchor relationship built early enough, and nobody has shown them the cost of not compressing the timeline. I covered the cost of this drift in detail in <a href="journal-fat-middle.html">The Fat Middle</a>. The short version: losing a $10M allocation costs approximately $2-3M in GP economics. Every month of slow process is a month in which something can change that removes an LP from your addressable pipeline permanently.</p>
+
+    <h2 id="drivers">The five drivers of capital formation &mdash; and where momentum fits</h2>
+
+    <p>Every successful raise requires five things to be above a minimum threshold simultaneously. Not at their maximum &mdash; just above their minimum.</p>
+
+    <div class="article-table-wrap">
+      <table class="article-table">
+        <thead>
+          <tr>
+            <th>Driver</th>
+            <th>Minimum threshold</th>
+            <th>What this means in practice</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Performance</strong></td>
+            <td>Credible track record that earns the meeting</td>
+            <td>Above threshold, additional performance delivers diminishing returns on close speed.</td>
+          </tr>
+          <tr>
+            <td><strong>Narrative</strong></td>
+            <td>Clear differentiation an LP can explain internally</td>
+            <td>Must survive the investment committee without the manager in the room.</td>
+          </tr>
+          <tr>
+            <td><strong>Execution</strong></td>
+            <td>Fast follow-up, tracked pipeline, DDQ ready</td>
+            <td>Below threshold, operational signals actively undermine credibility.</td>
+          </tr>
+          <tr>
+            <td><strong>Access</strong></td>
+            <td>Enough qualified LPs to build an anchor and create density</td>
+            <td>Not every LP in the market. The right LPs for your strategy and stage.</td>
+          </tr>
+          <tr>
+            <td><strong>LP fit &amp; timing</strong></td>
+            <td>LPs who are actively allocating to your strategy now</td>
+            <td>Approaching the wrong LPs at the wrong time is effort that never compounds.</td>
+          </tr>
+          <tr class="table-emphasis-row">
+            <td><strong>Momentum</strong></td>
+            <td><em>All five above threshold simultaneously within an open window</em></td>
+            <td>Not one driver at maximum. All five above minimum. One driver below threshold kills the system.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The key insight from this framework is not that all five drivers need to be perfect. It is that <strong>one driver below threshold breaks the entire system,</strong> regardless of how strong the others are. A fund with exceptional performance, sharp narrative, and tight execution but approaching LPs who are not in market for their strategy will not generate momentum. A fund with everything else in place but execution below threshold will signal operational immaturity at exactly the moment LPs are deciding whether to trust it.</p>
+
+    <p>Momentum is not a sixth driver sitting alongside the others. It is the emergent property that appears when all five are above threshold at the same time, within a finite window. That window is the part most managers underestimate.</p>
+
+    <div class="article-callout">
+      <div class="callout-eye">The window question</div>
+      <p>Markets move. Themes rotate. CIOs change jobs. The LP who was aligned with your strategy in Q1 may have shifted priorities by Q3. The window during which all five drivers are above threshold simultaneously is finite and not predictable in length.</p>
+      <p>Momentum matters not just because it closes raises faster but because it closes them while the window is open. I once watched a very capable manager lose a significant allocation they had been working on for nearly a year. Performance was strong and the LP had been genuinely interested throughout. But the process had moved too slowly, with one meeting every quarter. In the end, the LP's priorities had shifted.</p>
+    </div>
+
+    <h2 id="activation">What activates momentum</h2>
+
+    <p>Momentum does not suddenly appear because you have worked harder or pitched better. It appears because specific, identifiable mechanisms are activated. Understanding what these mechanisms are means you can activate them deliberately rather than waiting for them to appear.</p>
+
+    <h3>Before the mechanisms: the right posture.</h3>
+
+    <p>But first of all there is something that runs underneath all these mechanisms and determines whether they will work. It is not a tactic. It is a disposition, a mindset.</p>
+
+    <p>Most fund managers approach a raise from a position of scarcity. They need capital. They need this LP or anchor. They need this close. That need is visible in how they conduct themselves: in how quickly they follow up, how readily they adjust their terms, how much they accommodate every LP request, how anxious the conversation feels when a commitment seems to be slipping. Experienced LPs read this immediately. Nobody invests in a fund manager who appears to be desperate.</p>
+
+    <p>The managers who close fastest are the ones who carry themselves differently. Not because they are indifferent to whether LPs invest &mdash; they are not &mdash; but because they have done enough preparation that they genuinely have options. They are people with an <strong>abundance mindset.</strong></p>
+
+    <p>Having an abundance mindset fundamentally changes how you show up in every LP conversation. Early in my career I walked into LP meetings the way most first-time fundraisers do: nervous and treating every pitch like it was my one shot. That scarcity mindset follows you into the room. You qualify yourself before anyone has asked a question, and try to prove yourself before anyone has challenged you. It is the fundraising equivalent of the desperate single guy at the bar. Nobody invests in a fund that appears to need them.</p>
+
+    <p>What shifted for me over time was not confidence for its own sake, or a shift in personality. When you realise that no single meeting is existential and that you have options, you walk in differently. LPs feel that immediately.</p>
+
+    <p>The practical expression of this is something most managers never try: <strong>qualifying the LP rather than waiting to be qualified by them.</strong> Most investors spend their entire career being pitched. They rarely get asked to explain themselves. In a first meeting, ask the LP what they are genuinely looking for. Ask what their decision process looks like and what the typical timeline is from first meeting to commitment. Ask what has made previous fund relationships work well for them and what has not. Ask whether your strategy actually fits what they are building, in your terms not theirs.</p>
+
+    <p>These are not trick questions. They are the questions you actually need answered to know whether this LP is right for your fund. And they signal something important: you are conducting a mutual qualification, not a pitch. You are deciding whether they are right for you at the same time they are deciding whether you are right for them.</p>
+
+    <p>When done well this is not arrogant. It is professional. The LP who finds it off-putting was probably not going to invest anyway. The LP who responds well &mdash; and most institutional LPs respond very well, because they are rarely treated as equals rather than targets &mdash; is now in a different conversation than the one they expected to be in.</p>
+
+    <p>One caveat: the abundance mindset is not a performance. You cannot fake it if your pipeline is empty and you are three months from running out of road. Which is exactly why <em>front-loading</em> matters, and why the mechanisms that follow all require work done before the raise begins, not during it. The posture follows from the preparation. Get the preparation right and the posture takes care of itself.</p>
+
+    <p>So what does that preparation actually look like? There are four specific mechanisms that, when activated deliberately, create the conditions for momentum to build.</p>
+
+    <h3>Mechanism 1. The anchor commitment.</h3>
+
+    <p>The first institutional commitment to your fund does two things simultaneously that no pitch can replicate.</p>
+
+    <p><strong>First, it extends your access.</strong> LPs who would never take a cold introduction from you will take a warm introduction from an institution they respect. The anchor's reputation and network is social proof.</p>
+
+    <p><strong>Second, an anchor reduces the diligence burden for every subsequent LP.</strong> They are not starting from zero. They are joining something a respected peer has already evaluated. This is not irrational. It is Bayesian updating based on credible information.</p>
+
+    <p>Paul Graham described this from the investor side.</p>
+
+    <blockquote class="article-quote">
+      <p>When one investor wants to invest in you, that makes other investors want to, which makes others want to, and so on.</p>
+      <cite>Paul Graham</cite>
+    </blockquote>
+
+    <p>The mechanism is identical in institutional LP fundraising.</p>
+
+    <p>The practical implication is counterintuitive. Most managers treat the anchor as the first LP they happen to close. The right approach is to treat the anchor as a <strong>strategic decision made 12 to 18 months before you open the raise.</strong> The right anchor is not the LP who is most likely to say yes quickly. It is the LP whose commitment will send the strongest signal to the specific LP community you are trying to reach.</p>
+
+    <p>What <em>front-loading</em> the anchor looks like in practice:</p>
+
+    <ul class="article-list">
+      <li><strong>Identify two or three anchor candidates</strong> based on their credibility in your LP market, not their ease of access. A smaller endowment that other endowments follow is worth more as an anchor than a larger family office that endowments do not track.</li>
+      <li><strong>Map the full decision structure of each candidate</strong> before you have a single fundraising conversation. Who is the analyst who will first evaluate you? The investment manager who will sponsor you internally? The CIO who will sign off? The investment committee who will vote?</li>
+      <li><strong>Build relationships across that structure,</strong> not just with your primary contact. Find legitimate reasons to know people beyond the door you walk through. A fund manager speaking on a panel at an event attended by the analyst. A research note sent to the investment manager because it is genuinely relevant to their portfolio. If only one person in the institution knows you, you are asking that person to sell you to a room full of people who have never experienced you directly.</li>
+      <li><strong>Have an explicit timing conversation nine months before you open the raise.</strong> Not a pitch. A specific question: &ldquo;We are planning to open our next raise in [timeframe]. Does that timing work for your allocation calendar?&rdquo; This conversation gives you real information early enough to act on it.</li>
+    </ul>
+
+    <h3>Mechanism 2. Social proof.</h3>
+
+    <p>When LPs are aware that other LPs they respect are seriously considering your fund, their own evaluation threshold changes. They are joining something that has already passed peer scrutiny.</p>
+
+    <p>This is where the front-loading work on your existing LP base pays off. The social proof that matters in institutional fundraising does not come from connecting prospects to each other. It comes from your existing LP base: investors who have been in your previous funds, who have seen you perform through good markets as well as tough ones, and who will speak credibly about their experience when prospective LPs call them as references.</p>
+
+    <p>The managers who generate the strongest social proof are the ones who have invested in existing LP relationships so deeply that those LPs become genuine advocates. Not because they were asked to be, but because they gave before they asked, for years.</p>
+
+    <p>The governing principle across all of it is the same: <strong>demonstrate value before you need anything in return.</strong> Sell the content, not the fund. LPs are sophisticated readers of intent and they have seen every version of the soft-sell disguised as relationship building. The ones who become genuine advocates are the ones who received something genuinely useful from you when you were not asking for capital. Some guidelines:</p>
+
+    <ul class="article-list">
+      <li><strong>Invest in existing LP relationships between raises, not just during them.</strong> Proactive communication during drawdown periods. Specific outreach when something in the portfolio is relevant to an LP's broader mandate. A note when market conditions shift in a way that affects their portfolio, not just yours. Genuine interest in their situation that extends beyond the capital relationship. This is the foundation everything else rests on.</li>
+      <li><strong>When the raise opens, ask existing LPs individually for warm introductions</strong> to specific target LPs. Personal and specific requests &mdash; &ldquo;I know you are close to [contact] at [institution], would you be comfortable making a personal introduction given your experience with the fund?&rdquo; &mdash; not mass outreach asking anyone who knows anyone. The quality of the introduction you receive reflects the quality of the relationship you built in the first place.</li>
+      <li><strong>Build your existing LP community</strong> so that LPs who share your fund as a common investment naturally talk to each other. Annual meetings, strategy briefings, genuine intellectual events worth attending regardless of whether someone ever invests. When LPs know each other through their shared experience of your fund, the social proof network operates without you managing it. That is the goal.</li>
+    </ul>
+
+    <h3>Mechanism 3. Deadline pressure.</h3>
+
+    <p>Building credible social proof changes how LPs evaluate your fund. But awareness of peer interest does not by itself produce a commitment. LPs are in a state of perpetual optionality. Without a cost to waiting, waiting has no downside for them and every downside for you.</p>
+
+    <p>A credible, defined close date changes this calculation. The LP who was comfortable deferring until next quarter now faces a genuine risk of missing the vintage, missing the pricing, or being seen by colleagues as having passed on something that closed successfully.</p>
+
+    <p>The word &ldquo;credible&rdquo; is the critical one. A deadline that LPs know will be extended has no effect on their behaviour. <strong>A deadline backed by a real pipeline changes everything.</strong></p>
+
+    <p>Which raises the obvious question: what does a genuinely deep pipeline actually look like, and how do you know when you have enough of one?</p>
+
+    <h4>The pipeline reality check</h4>
+
+    <p>Most managers think they have more pipeline than they do. Here is how I actually ran it.</p>
+
+    <p>A large top of funnel is not optional. You need dozens of LP conversations before you open, ideally through warm introductions, happening over months not weeks. These are not pitches. They are mandate conversations. You are trying to understand what the LP actually needs, demonstrate that you understand their world, and let the relationship develop without any transaction pressure. The expertise you show in those conversations is your pitch. There is no other pitch.</p>
+
+    <p>At the end of every one of those conversations the LP will signal their interest level. The problem is that those signals are almost always more positive than the underlying reality. I started keeping a calibration in my head after getting burned enough times.</p>
+
+    <ul class="article-list">
+      <li>When an LP says &ldquo;enjoyed the meeting, please add me to your distribution list&rdquo; that is a <strong>5 per cent probability of closing.</strong> They are being polite and keeping their options open.</li>
+      <li>When an LP says &ldquo;we are actively looking for a strategy like yours&rdquo; that is <strong>25 per cent.</strong> Genuine interest but nowhere near committed.</li>
+      <li>When an LP says &ldquo;we are ready to invest, let's move forward&rdquo; that is <strong>50 per cent.</strong> Even at that stage, half of them will not close.</li>
+    </ul>
+
+    <p>This is not me being pessimistic. It is just the reality of how institutional LPs operate. Their incentive is to keep every door open as long as possible. Saying no closes a door permanently. Sounding interested costs them nothing. Most managers overestimate real interest levels by a factor of 2 to 3x, which is why raises that looked fully subscribed at month six are still open at month 18.</p>
+
+    <p>Track every conversation with an honest probability next to it. Not the probability you felt walking out of the meeting. The probability based on what the LP actually said, calibrated against the framework above.</p>
+
+    <div class="article-callout">
+      <div class="callout-eye">The momentum diagnostic</div>
+      <p>Add up the probability-weighted total across your active LP pipeline using the calibration above. If your total is below 200 per cent, you do not yet have enough genuine pipeline to make a deadline credible. If it is above 300 per cent &mdash; for example, six LPs each at 50 per cent &mdash; you have the foundation to start the flywheel.</p>
+      <p>Most managers who do this exercise for the first time discover they are significantly below where they thought they were. Before that number, opening formally is premature.</p>
+    </div>
+
+    <p>One thing I would like to state clearly: <strong>never misrepresent interest levels or commitments when speaking to other LPs.</strong> Investors talk to each other far more than most managers realise. If you tell one LP that two others have committed when they have not, and they make a call to verify, your credibility is gone. Not just for this raise. Social proof only works when the signal is real. The shortcut destroys the thing you are trying to build. The deadline only works if the pipeline behind it is real. Never overstate your position &mdash; you will be found out.</p>
+
+    <h3>Mechanism 4. Narrative heat.</h3>
+
+    <p>The first three mechanisms are largely within your control. The fourth is different. When your strategy is aligned with a macro theme that LPs are actively discussing, the conversation changes. You are confirming something the LP already suspects rather than educating them. The same pitch that requires four meetings to land in a cold market lands in one meeting when the environment has moved to validate it.</p>
+
+    <p>Narrative heat is the mechanism most subject to circumstance. You cannot manufacture a macro tailwind. But, to use a surfing analogy, <strong>you can time your raise to catch a wave rather than fight against one.</strong> And you can sharpen your narrative to reflect current LP thematic interest rather than the interest that existed 18 months ago.</p>
+
+    <p>The front-loading activity for narrative heat: in the 12 months before you officially open your raise, have five or six off-the-record conversations with active LPs in your strategy. Not pitches. Questions. Ask: where are you seeing interest move? What would make a fund in this space particularly compelling to you right now? Use what you learn to sharpen your positioning before you need it, not while you are already running the raise.</p>
+
+    <p>The mistake most managers make is treating their narrative as fixed. They develop a story for one market environment and keep telling LPs the same things as conditions shift around them. By the time the macro wind has turned against their strategy, they are still pitching the thesis that worked two years ago. The off-the-record conversations matter not just for the intel they produce but for the forcing function they create &mdash; they make you update your positioning on a live basis rather than discovering it is stale halfway through a raise.</p>
+
+    <h2 id="numbers">What momentum looks like in the numbers</h2>
+
+    <p>The table below compares a standard raise with a momentum-engineered raise across the same 10-LP pipeline. The total effort is roughly comparable. What changes is <em>where</em> the effort is concentrated.</p>
+
+    <div class="article-table-wrap">
+      <table class="article-table article-table-momentum">
+        <thead>
+          <tr>
+            <th>Commit</th>
+            <th>What is happening</th>
+            <th>Effort<br><span class="th-sub">Avg. interactions</span></th>
+            <th>Standard raise<br><span class="th-sub">Standard close</span></th>
+            <th class="col-momentum">Momentum raise<br><span class="th-sub">Momentum close</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1 (Anchor)</strong></td>
+            <td>Building anchor relationship &mdash; deeper, more considered</td>
+            <td>14 interactions</td>
+            <td>Month 5</td>
+            <td class="col-momentum">Month 5</td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td>First close announced with anchor in</td>
+            <td>8 interactions</td>
+            <td>Month 8</td>
+            <td class="col-momentum">Month 7</td>
+          </tr>
+          <tr>
+            <td><strong>3&ndash;4</strong></td>
+            <td>Social proof building, pipeline simultaneous</td>
+            <td>8 interactions</td>
+            <td>Month 12</td>
+            <td class="col-momentum">Month 9</td>
+          </tr>
+          <tr>
+            <td><strong>5&ndash;6</strong></td>
+            <td>Deadline pressure activating</td>
+            <td>8 interactions</td>
+            <td>Month 16</td>
+            <td class="col-momentum">Month 11</td>
+          </tr>
+          <tr>
+            <td><strong>7&ndash;8</strong></td>
+            <td>Momentum compounding</td>
+            <td>8 interactions</td>
+            <td>Month 20</td>
+            <td class="col-momentum">Month 13</td>
+          </tr>
+          <tr>
+            <td><strong>9&ndash;10</strong></td>
+            <td>Final closes attracted by signal</td>
+            <td>8 interactions</td>
+            <td>Month 24</td>
+            <td class="col-momentum">Month 15</td>
+          </tr>
+          <tr class="table-total-row">
+            <td><strong>Total</strong></td>
+            <td></td>
+            <td>~62 interactions</td>
+            <td>24 months</td>
+            <td class="col-momentum"><strong>15 months</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The counterintuitive result: the momentum raise requires more effort on commitments 1 and 2, and significantly less effort on commitments 3 through 10. <strong>Front-loading is not easier. It is hard in a different way.</strong> The managers who use it successfully are the ones willing to spend more time on fewer things earlier, rather than more time on more things later.</p>
+
+    <h2 id="calendar">The front-loading calendar</h2>
+
+    <p>The activities that create momentum are not complicated. What makes them difficult is timing. They need to happen before you need them, which means before the raise opens. Most managers begin this work too late to benefit from it.</p>
+
+    <div class="article-table-wrap">
+      <table class="article-table article-table-calendar">
+        <thead>
+          <tr>
+            <th>When</th>
+            <th>What to be doing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="calendar-when">18 months<br>before close</span></td>
+            <td>
+              <p>Identify three to five anchor candidates. Choose based on whose commitment sends the strongest signal to your LP market, not who is easiest to approach.</p>
+              <p>Map the full decision structure of each candidate. Who is the analyst, the director, the CIO, the investment committee?</p>
+              <p>Begin LP intelligence conversations. Where is LP appetite moving? What would make a fund in your strategy compelling right now?</p>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="calendar-when">12 months<br>before close</span></td>
+            <td>
+              <p>Host LP events for your existing LP base. Strategy briefings, market discussions. Build community among committed LPs, not prospects.</p>
+              <p>Begin preliminary conversations with 15 to 20 target LPs. Not pitches. Exploratory conversations about timing and mandate fit.</p>
+              <p>Publish substantive market content. A genuine point of view on your strategy. Build credibility before you need capital.</p>
+              <p>Map the introduction network. Which existing LPs know which target LPs? Plan warm introduction chains.</p>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="calendar-when">9 months<br>before close</span></td>
+            <td>
+              <p>Have the explicit anchor conversation around timing: &ldquo;We are planning to open in [timeframe]. Does this work for your allocation calendar?&rdquo;</p>
+              <p>Adjust your narrative based on LP intelligence. What angle is most resonant right now versus 18 months ago?</p>
+              <p>Identify which LP relationships need the most acceleration to reach first-meeting stage when you open.</p>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="calendar-when">6 months<br>before close</span></td>
+            <td>
+              <p>Confirm anchor candidate or pivot to second candidate.</p>
+              <p>Ask existing LPs individually for warm introductions to specific target LPs. These should be personal, specific requests.</p>
+              <p>Pipeline should be at 15 to 20 preliminary conversations. Enough that a six-month close date will feel credible from day one.</p>
+              <p>Finalise narrative positioning based on current market environment.</p>
+            </td>
+          </tr>
+          <tr class="calendar-open-row">
+            <td><span class="calendar-when calendar-when-open">When the<br>raise opens</span></td>
+            <td>
+              <p>Open with anchor committed or in final stages. The raise that opens with &ldquo;our first close is in sight&rdquo; creates different LP behaviour than one that opens with a blank slate.</p>
+              <p>Communicate close date clearly and early. Not as pressure but as information.</p>
+              <p>Multiple LPs in simultaneous active conversation. Social proof is visible from the start.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>There is more to say about the front-loading process than fits here &mdash; specifically, how to have the anchor timing conversation without it feeling like a pitch, and how to run LP conversations so you get honest information rather than polite interest. <em>This will be covered in a future piece in the series.</em></p>
+
+    <h2 id="hedge-funds">The hedge fund complication: momentum can run in both directions</h2>
+
+    <p>For PE and VC funds, momentum has a beginning and an end. You build it, use it, and the raise closes.</p>
+
+    <p>For hedge funds, momentum is permanent and bidirectional. When a fund has momentum &mdash; attractive performance, tight execution, growing LP base, narrative alignment &mdash; existing LPs stay and grow allocations, and new LPs arrive with lower friction. But when momentum breaks, due to a drawdown, the departure of a key person, or a period of operational slippage, the reverse mechanism activates. Existing LPs consider redemptions. New LP conversations become harder.</p>
+
+    <p>The same herd instinct that creates positive momentum creates negative momentum when the signal turns. This is why proactive LP communication during periods of underperformance is not just an IR best practice &mdash; it is an essential management activity. <strong>The LP who hears from you before they start to worry is far less likely to redeem. The LP who feels under-communicated-with during a difficult period will redeem before the recovery.</strong></p>
+
+    <p>For hedge funds, the execution infrastructure that keeps momentum running has to operate on two tracks simultaneously: retain existing AUM while acquiring new capital. Both are always live. Both draw on the same finite IR and management resources. The failures that break momentum &mdash; a follow-up that went out late, an LP who went dark and nobody noticed, a DDQ that sat unanswered for two weeks &mdash; are simultaneously both retention risks and acquisition risks.</p>
+
+    <h2 id="infrastructure">The infrastructure that makes it possible</h2>
+
+    <p>Every mechanism described above requires information you can act on in the moment you need it.</p>
+
+    <ul class="article-list">
+      <li>Which LPs are showing signals of readiness?</li>
+      <li>Is your interaction cadence consistent with your target close window?</li>
+      <li>Has the anchor relationship progressed enough to open the raise?</li>
+      <li>Is the narrative aligned with current LP thematic interest, or the interest from a year ago?</li>
+    </ul>
+
+    <p>Most managers cannot answer these questions without spending an afternoon digging through email threads, calendar history, and CRM notes that are generally out of date. The information exists. It is just not accessible in the moment it matters, which means the signals that would trigger the right actions are invisible until it is too late to act.</p>
+
+    <p>The managers who run the fastest and most predictable raises have built systems and infrastructure around this. They have real-time visibility into which LP relationships are heating and which are cooling. They know whether their interaction cadence across the pipeline is consistent with their target window. They have a system for watching for the anchor conversation moment rather than discovering it was right three months ago.</p>
+
+    <p>This is not a CRM problem. CRMs record what happened. Momentum engineering requires knowing what is happening <em>now</em> &mdash; which LPs engaged with the last update, whose response time has shortened, who asked a structural question about terms rather than strategy &mdash; and being able to act on those signals within days, not weeks.</p>
+
+    <h2>The underlying point</h2>
+
+    <p>The managers who build the biggest funds are not always the ones with the best performance. They are the ones who understood that a raise is not a passive process you run while waiting for LPs to decide. It is an active engineering project with specific mechanisms, inputs, and time windows.</p>
+
+    <p>Performance gets you the meeting. Narrative explains why you belong in the room. Execution determines whether the relationships in the room convert within the window that exists.</p>
+
+    <p>And momentum is what happens when all the key drivers are working together in a self-reinforcing way &mdash; where each commitment makes the next one more likely, where the raise accelerates rather than grinds, where the window is used rather than missed.</p>
+
+    <p><strong>Most managers leave that window open by accident rather than closing it by design.</strong></p>
+
+    <hr class="article-divider">
+
+    <p class="article-coda">Building the infrastructure that makes momentum engineering possible is what we do at TOMO. <a href="tomo_private_circle_v25.html#cta-form">Request an introduction &rarr;</a></p>
+
+    <p class="article-coda-sub">If you're arriving at this series for the first time, the earlier pieces are <em>The Fat Middle</em> on why pipelines drift, and <em>Reading the Signals</em> on how to tell movable LPs apart. <a href="journal-fat-middle.html">Start at N°01 &rarr;</a></p>
+
+  </div>
+
+</article>
+
+
+
+
+<div class="article-foot">
+
+  <a class="next-piece" href="journal-fat-middle.html">
+    <span class="next-piece-eye">N°01 · Return to the series</span>
+    <span class="next-piece-title">The Fat Middle</span>
+    <span class="next-piece-arrow">Read the essay →</span>
+  </a>
+
+  <div class="back-to-home">
+    <a href="tomo_private_circle_v25.html">← Return to hellotomo.ai</a>
+  </div>
+
+</div>
+
+</body>
+</html>

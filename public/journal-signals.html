@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fat Middle · tomo. Journal</title>
+<meta name="description" content="The 40% of raises that don't die from rejection. They die from drift.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canvas:#F9F6EF;
+  --card-warm:#F4EFE4;
+  --ink:#1C2B3A;
+  --navy:#1C2B3A;
+  --body:#4A5568;
+  --mute:#8898AA;
+  --whisper:#B4BCC6;
+  --amber:#C9933A;
+  --amber-deep:#A87826;
+  --rule:#D5D9E0;
+  --serif:'Newsreader',serif;
+  --sans:'Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --logo:'Fraunces',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--canvas);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;line-height:1.5;font-weight:400;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  min-height:100vh;
+}
+
+/* ============ NAV ============ */
+.nav{
+  background:var(--canvas);
+  border-bottom:1px solid var(--rule);
+  padding:22px 48px;
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:blur(8px);
+  background-color:rgba(249,246,239,0.92);
+}
+.nav-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.nav-logo{
+  font-family:var(--logo);
+  font-variation-settings:"opsz" 48;
+  font-weight:500;font-size:22px;
+  letter-spacing:-0.03em;color:var(--ink);
+  text-decoration:none;
+}
+.nav-logo .dot{color:var(--amber-deep);}
+.nav-back{
+  font-size:13px;color:var(--ink);
+  letter-spacing:-0.003em;text-decoration:none;
+  transition:color 160ms;
+}
+.nav-back:hover{color:var(--amber-deep);}
+
+/* ============ ARTICLE HEAD ============ */
+.article{
+  max-width:720px;margin:0 auto;
+  padding:72px 48px 40px;
+}
+.article-meta{
+  display:flex;align-items:center;gap:16px;
+  margin-bottom:28px;
+}
+.article-num{
+  font-family:var(--mono);
+  font-size:11px;letter-spacing:0.22em;
+  color:var(--amber-deep);font-weight:500;
+}
+.article-cat{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--whisper);
+}
+.article-cat::before{content:"·";margin-right:16px;color:var(--whisper);}
+
+.article-h{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 60;
+  font-weight:500;font-size:56px;line-height:1.05;
+  color:var(--ink);letter-spacing:-0.02em;
+  margin-bottom:24px;
+}
+.article-h em{font-style:italic;color:var(--amber-deep);font-weight:400;}
+
+.article-dek{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 22;
+  font-weight:400;font-size:22px;line-height:1.5;
+  color:var(--body);letter-spacing:-0.01em;font-style:italic;
+  margin-bottom:40px;max-width:620px;
+}
+
+.article-byline{
+  display:flex;align-items:center;gap:14px;
+  padding:20px 0;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  margin-bottom:56px;
+}
+.byline-name{
+  font-size:13px;font-weight:500;color:var(--ink);
+  letter-spacing:-0.003em;
+}
+.byline-meta{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--mute);
+}
+.byline-sep{color:var(--whisper);font-size:10px;}
+
+/* ============ BODY ============ */
+.article-body{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 18;
+  font-size:19px;line-height:1.7;
+  color:var(--ink);letter-spacing:-0.005em;
+}
+.article-body p{margin-bottom:24px;}
+.article-body > p:first-of-type::first-letter{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 96;
+  font-weight:500;
+  float:left;font-size:72px;line-height:0.85;
+  margin:10px 10px -4px 0;
+  color:var(--amber-deep);
+}
+.article-body h2{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 36;
+  font-weight:500;font-size:30px;line-height:1.2;
+  color:var(--ink);letter-spacing:-0.015em;
+  margin-top:56px;margin-bottom:20px;
+}
+.article-body h3{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 24;
+  font-weight:500;font-size:22px;line-height:1.3;
+  color:var(--ink);letter-spacing:-0.01em;
+  margin-top:40px;margin-bottom:14px;
+}
+.article-body strong{font-weight:600;color:var(--ink);}
+.article-body em{font-style:italic;color:var(--amber-deep);}
+.article-body blockquote{
+  border-left:3px solid var(--amber);
+  padding:8px 0 8px 28px;
+  margin:36px 0;
+  font-style:italic;
+  font-size:22px;line-height:1.55;
+  color:var(--body);
+}
+.article-body a{color:var(--amber-deep);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+
+/* Stub state — clearly marked placeholder */
+.stub-notice{
+  margin:48px 0 0;padding:24px 28px;
+  background:var(--card-warm);
+  border:1px dashed var(--amber);
+  border-left:3px solid var(--amber);
+  border-radius:6px;
+  font-family:var(--sans);
+  font-size:14px;line-height:1.6;color:var(--body);
+  font-style:normal;letter-spacing:-0.003em;
+}
+.stub-notice strong{color:var(--ink);font-weight:600;display:block;margin-bottom:6px;font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;}
+
+/* ============ FOOTER ============ */
+.article-foot{
+  max-width:720px;margin:80px auto 0;
+  padding:48px 48px 80px;
+  border-top:1px solid var(--rule);
+}
+.next-piece{
+  display:flex;flex-direction:column;gap:10px;
+  padding:28px 32px;
+  background:var(--card-warm);
+  border:1px solid var(--rule);border-radius:8px;
+  text-decoration:none;color:inherit;
+  transition:transform 220ms ease, border-color 220ms ease;
+  margin-bottom:40px;
+}
+.next-piece:hover{transform:translateY(-2px);border-color:var(--amber-deep);}
+.next-piece-eye{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+}
+.next-piece-title{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 28;
+  font-weight:500;font-size:24px;line-height:1.2;
+  color:var(--ink);letter-spacing:-0.015em;
+}
+.next-piece-arrow{
+  font-family:var(--mono);
+  font-size:11px;letter-spacing:0.14em;
+  color:var(--amber-deep);font-weight:500;
+  margin-top:4px;
+}
+
+.back-to-home{
+  text-align:center;margin-top:40px;
+}
+.back-to-home a{
+  font-size:13px;color:var(--mute);
+  letter-spacing:-0.003em;text-decoration:none;
+  transition:color 160ms;
+}
+.back-to-home a:hover{color:var(--amber-deep);}
+
+/* ============ RESPONSIVE ============ */
+
+/* Article additions (v23+) */
+.article-figure{
+  margin:48px -40px;
+  background:var(--card-warm);
+  padding:32px;
+  border-radius:4px;
+}
+.article-figure img{
+  display:block;max-width:100%;height:auto;margin:0 auto;
+  border-radius:2px;
+}
+.article-figure figcaption{
+  font-family:var(--sans);
+  font-size:13px;font-style:italic;
+  color:var(--mute);
+  text-align:center;margin-top:18px;
+  letter-spacing:-0.003em;line-height:1.5;
+}
+
+.article-table-wrap{
+  margin:40px 0;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.article-table{
+  width:100%;
+  border-collapse:collapse;
+  font-family:var(--sans);
+  font-size:14px;line-height:1.5;
+  color:var(--ink);
+}
+.article-table th,.article-table td{
+  padding:14px 16px;
+  text-align:left;
+  border-bottom:1px solid var(--rule);
+}
+.article-table th{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+  font-weight:500;color:var(--amber-deep);
+  vertical-align:bottom;
+  border-bottom:1.5px solid var(--amber-deep);
+}
+.article-table th .th-sub{
+  display:inline-block;margin-top:4px;
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:-0.003em;
+  text-transform:none;color:var(--mute);font-weight:400;
+}
+.article-table tbody tr:hover{background:rgba(201,147,58,0.04);}
+.article-table td:first-child{font-weight:500;}
+
+.article-callout{
+  margin:40px 0;
+  padding:28px 32px;
+  background:var(--card-warm);
+  border-left:3px solid var(--amber);
+  border-radius:0 4px 4px 0;
+}
+.article-callout .callout-eye{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  margin-bottom:12px;
+}
+.article-callout p{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 18;
+  font-size:17px;line-height:1.6;color:var(--ink);
+  margin-bottom:12px;
+}
+.article-callout p:last-child{margin-bottom:0;font-size:15px;color:var(--body);}
+
+.article-body ul.article-list,
+.article-body ol.article-list{
+  margin:20px 0 28px 0;
+  padding-left:24px;
+}
+.article-body .article-list li{
+  margin-bottom:14px;
+  padding-left:6px;
+  line-height:1.6;
+}
+.article-body .article-list li::marker{color:var(--amber-deep);}
+
+.article-divider{
+  border:none;
+  height:1px;
+  background:var(--rule);
+  margin:48px 0 32px 0;
+}
+.article-coda{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 18;
+  font-size:17px;line-height:1.7;
+  color:var(--body);
+  text-align:center;
+  max-width:560px;margin:0 auto;
+}
+
+
+/* Signals piece additions (v24+) */
+
+/* Callout variant: caution (for warm ghosting warning) */
+.article-callout.callout-caution{
+  border-left-color:var(--oxblood, #6B2B2B);
+  background:rgba(107,43,43,0.04);
+}
+.article-callout.callout-caution .callout-eye{
+  color:var(--oxblood, #6B2B2B);
+}
+
+/* Signal hierarchy table — extended with category break rows */
+.article-table-signals td{
+  vertical-align:top;
+  font-size:13.5px;line-height:1.55;
+}
+.article-table-signals .signal-channel{
+  font-family:var(--mono);
+  font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  display:block;margin-bottom:4px;
+}
+.article-table-signals .signal-name{
+  font-family:var(--serif);
+  font-weight:500;font-size:15px;
+  color:var(--ink);letter-spacing:-0.005em;
+}
+.article-table-signals tbody tr.table-category-row{
+  background:transparent;
+}
+.article-table-signals tbody tr.table-category-row:hover{
+  background:transparent;
+}
+.article-table-signals tbody tr.table-category-row td{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  padding:22px 16px 10px 16px;
+  border-bottom:1px solid var(--amber);
+  background:rgba(201,147,58,0.04);
+}
+
+/* Decay map — emphasize the threshold number */
+.article-table-decay .threshold-num{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 18;
+  font-weight:500;
+  font-size:17px;
+  color:var(--amber-deep);
+  white-space:nowrap;
+}
+
+/* Three-touch sequence — protocol block */
+.three-touch{
+  margin:40px 0;
+  padding:36px 36px 32px 36px;
+  background:var(--card-warm);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  position:relative;
+}
+.three-touch-head{
+  font-family:var(--mono);
+  font-size:11px;letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--rule);
+  margin-bottom:28px;
+}
+.touch-step{
+  margin-bottom:26px;
+  padding-left:18px;
+  border-left:2px solid var(--amber);
+}
+.touch-step:last-of-type{margin-bottom:28px;}
+.touch-num{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:600;
+  margin-bottom:6px;
+  display:flex;align-items:baseline;gap:14px;
+}
+.touch-day{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--mute);
+  font-weight:400;
+}
+.touch-title{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 20;
+  font-weight:500;font-size:18px;
+  color:var(--ink);letter-spacing:-0.008em;
+  margin-bottom:8px;
+}
+.touch-step p{
+  font-size:15px;line-height:1.6;color:var(--body);
+  margin:0;
+}
+.touch-outcomes{
+  margin-top:14px;
+  padding:22px 24px;
+  background:rgba(201,147,58,0.06);
+  border-radius:3px;
+}
+.touch-outcomes-head{
+  font-family:var(--mono);
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--amber-deep);font-weight:500;
+  margin-bottom:14px;
+}
+.touch-outcomes-list{
+  list-style:none;padding:0;margin:0;
+  display:flex;flex-direction:column;gap:10px;
+}
+.touch-outcomes-list li{
+  font-family:var(--serif);
+  font-size:15px;line-height:1.55;color:var(--ink);
+  display:flex;align-items:baseline;gap:12px;
+}
+.outcome-mark{
+  font-family:var(--mono);
+  font-size:14px;font-weight:600;
+  width:18px;display:inline-block;
+  flex-shrink:0;
+}
+.outcome-mark.outcome-up{color:var(--amber-deep);}
+.outcome-mark.outcome-flat{color:var(--mute);}
+.outcome-mark.outcome-down{color:var(--oxblood, #6B2B2B);}
+
+/* Coda sub-line — the Momentum cross-link after the TOMO close */
+.article-coda-sub{
+  font-family:var(--serif);
+  font-variation-settings:"opsz" 16;
+  font-style:italic;
+  font-size:15px;line-height:1.7;
+  color:var(--mute);
+  text-align:center;
+  max-width:560px;margin:20px auto 0 auto;
+}
+.article-coda-sub a{
+  color:var(--amber-deep);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+  font-style:normal;
+}
+.article-coda-sub em{color:var(--ink);}
+
+/* The main coda for Signals needs to NOT be italic (since it's a CTA sentence) */
+.article-coda{font-style:normal;color:var(--ink);font-weight:400;}
+.article-coda a{
+  color:var(--amber-deep);
+  font-weight:500;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+
+@media (max-width:768px){
+  .article-table-signals{font-size:12.5px;}
+  .article-table-signals td{padding:12px 10px;}
+  .three-touch{padding:24px;}
+  .touch-step{padding-left:14px;}
+  .touch-outcomes{padding:18px 18px;}
+}
+
+@media (max-width:768px){
+  .article-figure{margin:32px -24px;padding:20px;}
+  .article-table{font-size:13px;}
+  .article-table th,.article-table td{padding:10px 12px;}
+  .article-callout{padding:22px 24px;}
+  .article-callout p{font-size:16px;}
+}
+
+@media (max-width:768px){
+  .nav{padding:18px 24px;}
+  .article{padding:48px 24px 32px;}
+  .article-h{font-size:38px;}
+  .article-dek{font-size:18px;}
+  .article-body{font-size:17px;}
+  .article-body p:first-of-type::first-letter{font-size:58px;margin:6px 8px -2px 0;}
+  .article-foot{padding:40px 24px 64px;margin-top:60px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="tomo_private_circle_v25.html" class="nav-logo">tomo<span class="dot">.</span></a>
+    <a href="tomo_private_circle_v25.html#journal" class="nav-back">← Back to The Journal</a>
+  </div>
+</nav>
+
+<article class="article">
+
+  <div class="article-meta">
+    <span class="article-num">N°02</span>
+    <span class="article-cat">The Journal · Diagnostics</span>
+  </div>
+
+  <h1 class="article-h">The <em>Signals.</em></h1>
+
+  <p class="article-dek">Which LPs are actually worth your time right now?</p>
+
+  <div class="article-byline">
+    <span class="byline-name">Geoffrey Chen</span>
+    <span class="byline-sep">·</span>
+    <span class="byline-meta">Founder</span>
+    <span class="byline-sep">·</span>
+    <span class="byline-meta">April 2026</span>
+  </div>
+
+  <div class="article-body">
+
+    <h2>The question most managers forget to ask</h2>
+
+    <p>The highest leverage activity in a capital raise is not finding more LPs.</p>
+
+    <p>It is knowing which of the LPs you have already met are worth your time right now, and then acting on that before the window closes.</p>
+
+    <p>This may sound obvious, but I promise you it is not. I spent years managing raises the way most fund managers still do today: roughly equal attention to everyone, an update going to the full list, calls with whoever was most responsive. The relationships that felt warm got more time. The ones that had gone quiet got a nudge every few weeks, if I remembered. It seemed organised, systematic, and yet was fundamentally wrong.</p>
+
+    <p>The problem is that the feeling of warmth is not the same as actual movement. An LP who sends you friendly replies and asks good questions in meetings can be completely stationary. An LP who has gone quiet for three weeks might be in an active internal process you cannot see. The gap between what a pipeline feels like and what it actually is &mdash; that is where raises overrun and allocations get lost.</p>
+
+    <p>Here is the specific question you need to ask yourself: <strong>of the 40 to 80 LPs in your pipeline who expressed interest after a first meeting, which 10 to 15 are genuinely movable in the next 60 to 90 days?</strong></p>
+
+    <p>Not warm or interested, but actually movable &mdash; meaning they have an active internal process underway, an open allocation window, and a mandate that fits your strategy right now.</p>
+
+    <p>At any point in a raise, a typical pipeline of 40 to 80 warm contacts contains roughly 10 to 15 who meet that description. The rest are either too early in their process, too late in their cycle, or &mdash; and this is the part that costs you the most &mdash; maintaining regular interactions with you, but with zero intention to commit. The highest leverage skill in fundraising is telling the difference early enough to act on it.</p>
+
+    <h2>The mistake: treating activity as progress</h2>
+
+    <p>Before we talk about anything else, there is a conceptual mistake worth naming because it corrupts almost every pipeline review I have seen.</p>
+
+    <p><strong>An LP can be active without progressing. They can be progressing without being active. And they can be cooling while appearing completely warm.</strong></p>
+
+    <p>These are all different states and require different responses. Managing them the same way &mdash; which is what happens when you track activity instead of direction &mdash; is what produces pipelines that look healthy but close slowly.</p>
+
+    <p>An LP who replies promptly to everything you send is active. But if those replies have been getting shorter and more generic over the last eight weeks, they might be cooling. Your CRM shows green and your gut says warm. But the relationship is actually drifting.</p>
+
+    <p>An LP who has not replied in three weeks might be in an active internal process: an investment committee backlog, a mandate review, a conversation with a peer who invested in your fund. They are progressing without being active. Your gut says cold. The reality is they may be your next close.</p>
+
+    <p>The key takeaway: <strong>the signals worth tracking are not activity signals. They are direction signals.</strong> Not how often an LP engages, but whether the direction of engagement has changed, and whether the underlying process is moving forward or standing still.</p>
+
+    <div class="article-callout">
+      <div class="callout-eye">The diagnostic question</div>
+      <p>For each of your 20 most active LP relationships &mdash; is this LP trending warmer or cooler over the last 30 days, and how do you know?</p>
+      <p>Most managers cannot answer this question honestly. They have a gut feel &mdash; some relationships feel warmer than others, but they do not have a systematic way to tell the difference between an LP who is genuinely moving and one who is simply staying warm. The rest of this piece is about closing that gap.</p>
+    </div>
+
+    <h2>Why your gut feel is probably wrong</h2>
+
+    <p>LPs seldom give you accurate information about their own temperature.</p>
+
+    <p>They are professionally trained and incentivised to stay warm. Saying no closes a door permanently and creates awkwardness in a small industry. Saying yes triggers a commitment process, internal approvals, and accountability for the outcome. Staying warm &mdash; responsive, friendly, generally positive &mdash; costs them nothing and preserves all their options. Every signal an LP sends has been calibrated, consciously or not, to keep you engaged without committing to anything.</p>
+
+    <p>This means your instinctive read of the pipeline is being fed misleading information systematically. And the bias is always in the same direction: <strong>you will consistently overestimate how many of your warm relationships are actually moving.</strong></p>
+
+    <p>This is a pattern I have seen over and over again in almost every raise I have been involved in. Many managers naively believe that 20 to 30 per cent of their pipeline is genuinely warm.</p>
+
+    <p>Yet when managers actually look at their data &mdash; reply trends over time, content of responses, who has initiated contact versus who has only acknowledged &mdash; the real number of progressing relationships is closer to 5 to 10 per cent. The rest of the pipeline has been generating the appearance of activity or warmth without proof of actual progress. That gap, between perceived pipeline health and actual pipeline health, is where most of the lost time in a raise lives.</p>
+
+    <h2>&ldquo;Warm ghosting&rdquo;: the signal that costs you the most</h2>
+
+    <p>Most fundraising advice about LP signals focuses on what heating looks like. But I want to start with cooling because the cooling signal most managers miss is not the one you would expect &mdash; and it is a costly one to miss.</p>
+
+    <p>The LP who stops responding is not the dangerous one. You know that relationship has stalled and you can decide what to do about it.</p>
+
+    <p>No, the most dangerous LP is the one who keeps on responding to you and leading you on, even though they have zero intention of investing. Missing this signal is expensive, as it consumes limited time and attention that could be used for a better ROI.</p>
+
+    <div class="article-callout callout-caution">
+      <div class="callout-eye">Caution</div>
+      <p>Beware of the LP who is warm ghosting you.</p>
+      <p>There is a pattern I call &ldquo;maintenance mode&rdquo; &mdash; or perhaps more aptly, warm ghosting. The replies keep coming promptly, pleasantly, and professionally. But something has changed in what they contain. The questions get shorter. The engagement becomes more generic. The affirmations arrive on schedule: &ldquo;great update, very relevant, let's reconnect soon.&rdquo; On the surface the relationship looks healthy. In the CRM it looks active. But the content has hollowed out.</p>
+      <p>This is how institutional LPs manage relationships they have decided not to pursue. Saying no creates friction and closes doors. Staying warm costs them nothing and leaves the door technically open for a future cycle. Warm ghosting is not dishonesty or rudeness &mdash; it is actually professional courtesy. But most managers read it as warmth, and that misread is expensive.</p>
+    </div>
+
+    <p>Most managers do not have a system for distinguishing which LPs are genuinely warming from which are just being polite. They treat both as one and the same. The tell is in the quality of replies, not the frequency. An LP who is genuinely moving will ask questions that require real answers. They will reference something specific from your last conversation. They will occasionally reach out between your scheduled touchpoints. An LP who is maintaining will respond to everything you send but will never initiate and will never ask anything that moves the conversation forward.</p>
+
+    <p>Make sure you track the content of LP replies over 60 days, not just whether they arrived. A declining quality trend &mdash; from specific questions to generic affirmations &mdash; predicts cooling before response time changes. By the time the cadence slows, the window has often already closed.</p>
+
+    <h2>What genuine movement looks like, and how to see it systematically</h2>
+
+    <p>The heating signals worth watching are those that indicate an internal process is underway. They show that someone inside the institution is thinking about you when you are not in the room. The challenge is that most of these signals live across four or five systems simultaneously, and assembling them manually for hundreds of LP relationships is an afternoon which nobody has.</p>
+
+    <p>What follows is the LP signal hierarchy.</p>
+
+    <div class="article-table-wrap">
+      <table class="article-table article-table-signals">
+        <thead>
+          <tr>
+            <th>Signal</th>
+            <th>What it looks like</th>
+            <th>What it means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-category-row">
+            <td colspan="3">Always visible &mdash; email &amp; calendar signals</td>
+          </tr>
+          <tr>
+            <td><span class="signal-channel">Email</span><br><span class="signal-name">Reply velocity</span></td>
+            <td>Reply time shortens from five days to one day, with no change in your outreach.</td>
+            <td>Internal prioritisation has shifted. This happened before you did anything to cause it. The earliest leading indicator in any pipeline.</td>
+          </tr>
+          <tr>
+            <td><span class="signal-channel">Email</span><br><span class="signal-name">Reply initiation</span></td>
+            <td>LP emails you unprompted, forwards an article, follows up on something from three weeks ago, reaches out between touchpoints.</td>
+            <td>Categorically different from an LP who only responds. Signals the relationship has moved from passive interest to active interest.</td>
+          </tr>
+          <tr>
+            <td><span class="signal-channel">Email</span><br><span class="signal-name">Reply substance</span></td>
+            <td>LP asks questions that require real answers. They are specific and tied to your last conversation. Replies reference something you said.</td>
+            <td>A genuine mover asks questions. A warm ghoster just acknowledges. Declining question quality over 60 days predicts cooling before cadence changes.</td>
+          </tr>
+          <tr>
+            <td><span class="signal-channel">Calendar</span><br><span class="signal-name">Calendar patterns</span></td>
+            <td>LP proposes meetings rather than accepting yours. Meetings lengthen. No rescheduling or shortened slots.</td>
+            <td>Who initiates and for how long signals internal prioritisation. An LP who rescheduled twice and cut from 60 to 30 minutes is cooling.</td>
+          </tr>
+          <tr class="table-category-row">
+            <td colspan="3">Requires specific integrations &mdash; more powerful where available</td>
+          </tr>
+          <tr>
+            <td><span class="signal-channel">Data room</span><br><span class="signal-name">Document engagement</span></td>
+            <td>LP opens your deck or letter three times in two days. Returns specifically to the subscription agreement or reference list. Visible signals if you use DocSend or DealRoom.</td>
+            <td>Multiple opens implies LP is sharing internally. Subscription agreement access is preparation, not consideration. Most managers should monitor this regularly, but they don't.</td>
+          </tr>
+          <tr>
+            <td><span class="signal-channel">Calendar</span><br><span class="signal-name">Meeting composition</span></td>
+            <td>New name appears from the same firm at a second meeting. Associate &rarr; PM &rarr; CIO progression across meetings.</td>
+            <td>Who an LP brings tells you more than anything said in the meeting. CIO arrival = decision close. Legal or compliance = effectively committed.</td>
+          </tr>
+          <tr>
+            <td><span class="signal-channel">Meeting</span><br><span class="signal-name">Transcript signals</span></td>
+            <td>Questions shift from strategy to terms &mdash; minimum commitments, lock-up, DDQ timeline. Competitor fund referenced.</td>
+            <td>Strategy questions = evaluation. Structural questions = preparation. The shift is the signal. Practical constraint: consent. Some firm privacy policies don't permit AI note-takers on calls.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>The most overlooked signal: re-engagement after silence.</h3>
+
+    <p>There is one re-engagement pattern that is an expensive one to miss.</p>
+
+    <p>An LP who went dark for 60 days and then makes contact with something small &mdash; whether that is a question or a reference to an old conversation &mdash; was not indifferent to you in the first place. It signals that something may have shifted internally: an allocation cycle opened, or a peer they respect said something about your fund. <strong>The window is open, but it is time-limited. The right response is same-day, not next week.</strong></p>
+
+    <p>The reason why this signal is easy to miss is that it arrives from an LP relationship you have already mentally categorised as cold. Your CRM shows 60 days of inactivity, so you have mentally moved on. The re-engagement arrives in an inbox full of more urgent things and gets triaged as a low-priority reply rather than recognised as a high-priority window.</p>
+
+    <p>A system that has been tracking reply velocity across your full pipeline should flag this pattern automatically because it represents a meaningful change from the prior 30 to 60 days. <em>The change is the signal. The content of the message is almost secondary.</em></p>
+
+    <h3>What this looks like in practice.</h3>
+
+    <p>The practical implication of this signal hierarchy is straightforward.</p>
+
+    <ul class="article-list">
+      <li><strong>The four email and calendar signals above</strong> &mdash; reply velocity, initiation patterns, reply substance, and calendar patterns &mdash; are always available and can be monitored automatically across your full LP base, assuming you have an agent or AI tool that connects to your email and calendar. These signals should not require your active attention. Agents should surface the relationships worth your active attention.</li>
+      <li><strong>The document and transcript signals</strong> are more powerful when they are available, but they require specific integrations or LP consent that not every fund will have on day one. These are additive rather than foundational.</li>
+      <li><strong>The judgment signals</strong> &mdash; meeting composition interpretation, re-engagement context &mdash; are signals that still require humans. (One area in which AI cannot replace humans just yet.) What changes is that you are applying your judgment to a small number of flagged LP relationships rather than trying to maintain situational awareness across 40 simultaneously. This is cognitively exhausting and depends on someone remembering.</li>
+    </ul>
+
+    <p>Historically, the managers I know who run the fastest and most effective raises are those with systems &mdash; and they are disciplined about monitoring LP signals. Knowing what movement looks like is half the problem. The other half is knowing when stillness should alarm you.</p>
+
+    <h2>When silence should concern you (and when it should not)</h2>
+
+    <p>Not all silence is the same. The decay map below is not about when to move a relationship to Dormant. It is about when to intervene before it gets there. The threshold at which inactivity becomes a warning signal depends entirely on where the LP is in your process and what they told you last.</p>
+
+    <p>Treating all silence with the same urgency &mdash; or worse, treating it all as neutral &mdash; is how LP relationships cool without anyone noticing. Below is a framework I have developed over time.</p>
+
+    <div class="article-table-wrap">
+      <table class="article-table article-table-decay">
+        <thead>
+          <tr>
+            <th>Context</th>
+            <th>Silence threshold</th>
+            <th>What to do at the threshold</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Post-meeting, no next step agreed</td>
+            <td><span class="threshold-num">30 days</span></td>
+            <td>Send a substantive re-engagement. Not a check-in &mdash; something worth reading, preferably based on LP interest.</td>
+          </tr>
+          <tr>
+            <td>LP said &ldquo;monitor for now&rdquo; or &ldquo;keep us posted&rdquo;</td>
+            <td><span class="threshold-num">60 days</span></td>
+            <td>One substantive touch. If no response, move to quarterly holding pattern.</td>
+          </tr>
+          <tr>
+            <td>In active diligence</td>
+            <td><span class="threshold-num">30 days</span></td>
+            <td>Flag internally. This is early cooling at a critical stage. Intervene now.</td>
+          </tr>
+          <tr>
+            <td>Soft commit / verbal agreement to invest</td>
+            <td><span class="threshold-num">20 days</span></td>
+            <td>Direct outreach. Something has changed. Do not wait for them to tell you.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="article-callout">
+      <div class="callout-eye">The critical distinction</div>
+      <p>Decay is not inactivity. Decay is unexplained silence relative to stated intent.</p>
+      <p>An LP who said &ldquo;monitor for now&rdquo; going quiet for 80 days is not decaying. They told you to expect that. An LP who said &ldquo;we're ready to move forward&rdquo; going quiet for 20 to 30 days is in decay. The threshold depends on what they told you, not how long it has been.</p>
+    </div>
+
+    <h3>But what about the LPs who are producing no signals at all?</h3>
+
+    <p>This is where most signal-based frameworks break down. They tell you what heating and cooling look like, but these frameworks assume that signals are even being generated in the first place.</p>
+
+    <p>Yet a large portion of any pipeline is neither warming nor cooling. It is simply quiet. So you have to do different work, as a fundraiser.</p>
+
+    <p>These are the &ldquo;Fat Middle&rdquo; LPs who expressed interest after a first meeting and then drifted. They may not be warm ghosting you. But that does not mean they are cooling either. They are not generating signals because nothing has happened in between meetings to generate a signal in either direction.</p>
+
+    <p><strong>Waiting for signals from this group is the wrong approach. The right approach is to generate signals deliberately.</strong></p>
+
+    <h2>How to force the question</h2>
+
+    <p>The goal of a deliberate outreach to a quiet LP is not to close them. It is to get a response &mdash; any response &mdash; that shows you which category they belong in. Are they warmer than the silence suggested? In maintenance mode? Genuinely dormant? You cannot know until something forces the question.</p>
+
+    <p>Here is how to do it in three touches over two weeks.</p>
+
+    <div class="three-touch">
+      <div class="three-touch-head">The three-touch sequence</div>
+
+      <div class="touch-step">
+        <div class="touch-num">Touch 1<span class="touch-day">Day 1</span></div>
+        <div class="touch-title">The relevant insight</div>
+        <p>This is not an email to &ldquo;just check in.&rdquo; Send specific, substantive content relevant to their mandate. One sentence on why you thought of them, without any ask or mention of where they are in your process.</p>
+      </div>
+
+      <div class="touch-step">
+        <div class="touch-num">Touch 2<span class="touch-day">Day 5&ndash;7</span></div>
+        <div class="touch-title">The direct question</div>
+        <p>Follow up with a direct question. For example: &ldquo;Are you still looking at the window we discussed, or has your allocation calendar shifted?&rdquo; Or: &ldquo;We had a meaningful conversation about your allocation when we last spoke. Has your thinking on that evolved?&rdquo; The quality of the LP's answer tells you which category they belong in.</p>
+      </div>
+
+      <div class="touch-step">
+        <div class="touch-num">Touch 3<span class="touch-day">Day 12&ndash;14</span></div>
+        <div class="touch-title">The final question (if needed)</div>
+        <p>Ask directly without being aggressive: &ldquo;I want to make sure I am being respectful of your time. Is this still relevant for your current cycle, or better to reconnect in six months?&rdquo; A quick no is worth more than six months of silence. It frees up your time to work on LPs that are genuinely moving and gives you a re-engagement point when timing changes.</p>
+      </div>
+
+      <div class="touch-outcomes">
+        <div class="touch-outcomes-head">Three outcomes, all better than silence</div>
+        <ul class="touch-outcomes-list">
+          <li><span class="outcome-mark outcome-up">&uarr;</span> Warmer than the silence suggested &rarr; accelerate</li>
+          <li><span class="outcome-mark outcome-flat">&rarr;</span> Warm ghosting identified &rarr; deprioritise early</li>
+          <li><span class="outcome-mark outcome-down">&darr;</span> Genuinely dormant &rarr; quarterly hold</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>Run this sequence across your quiet Fat Middle contacts in batches of 10 to 15 per week. Within four to six weeks you will have a completely different picture of your pipeline and be able to sort it into three clear groups: warmer than you thought, in maintenance mode, or genuinely dormant. Each group gets managed differently. All three are better than a pipeline you cannot read.</p>
+
+    <h2>The practical audit: finding your 10 to 15</h2>
+
+    <p>Now take your 20 most active LP relationships. For each one, answer two questions honestly.</p>
+
+    <p><strong>First: when was the last high-quality interaction?</strong></p>
+
+    <p>I am not referring to the last reply you logged in your CRM. I mean the last reply that contained a specific question &mdash; preferably tied to your content &mdash; or a meeting request. &ldquo;Thanks, noted&rdquo; does not count. &ldquo;Great update, let's catch up soon&rdquo; also does not count. As discussed, most CRMs reset the contact clock on any reply, which is why CRM data systematically overstates relationship health. Apply the tighter definition and note how many of your &ldquo;active&rdquo; relationships look different.</p>
+
+    <p><strong>Second: has the quality of their replies been increasing, flat, or declining over the last 60 days?</strong></p>
+
+    <p>Not the frequency of replies but the content. Are they asking sharper questions or shorter ones? Are they engaging in specifics? A declining quality trend is the earliest warning signal in any cooling relationship, and it arrives weeks before the cadence changes. This is the signal most managers never track, because CRMs record whether a reply arrived, but not what it actually contained.</p>
+
+    <p>The managers who do this audit honestly find the same two things almost every time. Several relationships they had considered warm are actually in maintenance mode. Equally, three to five relationships they had categorised as quiet or slow are showing genuine direction.</p>
+
+    <div class="article-callout">
+      <div class="callout-eye">The moveability number</div>
+      <p>Of your 20 most active LP relationships, how many are showing positive directional signals across at least two channels &mdash; response content, interaction velocity, digital engagement, or meeting composition &mdash; in the last 30 days?</p>
+      <p>In most pipelines, the honest answer is 3 to 5 out of 20. Managers expect it to be closer to 10. The gap between expectation and reality is where the extra 10 months in a raise lives.</p>
+      <p>Those 3 to 5 are almost certainly your next closes. They were there the whole time. The question is whether you had a system for seeing them.</p>
+    </div>
+
+    <h2>Why most managers cannot do this</h2>
+
+    <p>The signals above are not hidden. They are in your email threads, your calendar, your newsletter analytics, and your data room right now.</p>
+
+    <p>The reason most managers cannot act on them is not discipline or awareness. It is because the information exists across four or five systems that do not communicate, and assembling it manually for 40 relationships takes time no one has. So it does not get done. Pipeline health gets read from gut feel and recent memory rather than systematic observation. Activity is mistaken for progress. Warm ghosters go undetected for months.</p>
+
+    <p>In summary, the three questions that determine whether a raise closes on time are:</p>
+
+    <ol class="article-list">
+      <li>Which LPs in my pipeline are showing genuine directional signals right now?</li>
+      <li>Are my interactions with the most movable relationships tracking at a pace consistent with my target window?</li>
+      <li>When silence hits, am I applying the right threshold for this LP's context, or treating all silence the same?</li>
+    </ol>
+
+    <p>Most managers cannot answer all three of these questions without an afternoon of digging through email history, CRM notes, and calendar records that are generally out of date. The information exists. It is just not accessible in the moment it matters.</p>
+
+    <p>In my experience, the managers who close the fastest raises have solved this problem. They know whose reply quality has been declining for six weeks while the relationship still looks active in the CRM. They know which LPs returned to which documents in the data room this week. They can run the two-question audit above in minutes rather than an afternoon.</p>
+
+    <p>This is not a CRM problem. CRMs record what happened. Knowing which of your 40 to 80 warm LPs are genuinely movable requires knowing what is happening now across email, calendar, digital engagement, and meeting patterns simultaneously &mdash; and being able to act on it while the window is still open. The capital raise that closes in 11 months rather than 22 months is almost never the one with a better pipeline. It is the one where the manager knew which 10 to 15 LPs actually mattered &mdash; and moved on them before the window closed.</p>
+
+    <hr class="article-divider">
+
+    <p class="article-coda">Building the infrastructure that reads these signals systematically is what we do at TOMO. <a href="tomo_private_circle_v25.html#cta-form">Request an introduction &rarr;</a></p>
+
+    <p class="article-coda-sub">I've also written a companion piece, <em>The Momentum Raise,</em> on engineering the conditions for a fast close before your raise even begins &mdash; anchor relationships, social proof, deadline mechanics. <a href="journal-momentum.html">Read it here &rarr;</a></p>
+
+  </div>
+
+</article>
+
+
+
+<div class="article-foot">
+
+  <a class="next-piece" href="journal-momentum.html">
+    <span class="next-piece-eye">N°03 · Next in the series</span>
+    <span class="next-piece-title">The Momentum Raise</span>
+    <span class="next-piece-arrow">Read the essay →</span>
+  </a>
+
+  <div class="back-to-home">
+    <a href="tomo_private_circle_v25.html">← Return to hellotomo.ai</a>
+  </div>
+
+</div>
+
+</body>
+</html>
