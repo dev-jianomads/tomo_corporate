@@ -137,6 +137,8 @@ html{scroll-behavior:smooth;}
   font-weight:500;letter-spacing:-0.005em;
 }
 .nav-cta:hover{background:var(--ink);color:var(--paper);}
+a.nav-cta{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;}
+a.btn-primary{text-decoration:none;}
 
 /* ==========================================================
    HERO
@@ -1179,7 +1181,7 @@ html{scroll-behavior:smooth;}
       <span class="nav-l"><a href="#journal" style="color:inherit;text-decoration:none;">Journal</a></span>
       <span class="nav-l"><a href="/terms" style="color:inherit;text-decoration:none;">Terms</a></span>
       <span class="nav-l"><a href="/privacy" style="color:inherit;text-decoration:none;">Privacy</a></span>
-      <button class="nav-cta" data-scroll-to="cta-form">Request an introduction</button>
+      <a class="nav-cta" href="https://cal.hellotomo.ai/welcome" target="_blank" rel="noopener noreferrer">Request an introduction</a>
     </div>
   </div>
 </nav>
@@ -1199,10 +1201,10 @@ html{scroll-behavior:smooth;}
         TOMO is AI for fundraising. Close capital faster, lose fewer LPs. <span class="hero-sub-mechanism">Engineer momentum.</span>
       </p>
       <div class="hero-cta">
-        <button class="btn-primary" data-scroll-to="cta-form">
+        <a class="btn-primary" href="https://cal.hellotomo.ai/welcome" target="_blank" rel="noopener noreferrer">
           Request an introduction
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
+        </a>
         <a class="btn-ghost" href="#proposition" style="text-decoration:none;">See how it works →</a>
       </div>
       <div class="hero-credo">
@@ -1650,42 +1652,24 @@ html{scroll-behavior:smooth;}
 </footer>
 
 <script>
-  // v23: wire all "Request an introduction" CTAs to scroll to the form,
-  // and submit the form via mailto so it works without a backend.
+  // Footer year; intro CTAs use the same Cal.com booking URL as src/App.tsx (Join the Beta).
   (function(){
     var fy = document.getElementById('foot-year');
     if (fy) fy.textContent = String(new Date().getFullYear());
-    // Smooth-scroll any button/link with data-scroll-to="cta-form" down to the form
-    document.querySelectorAll('[data-scroll-to="cta-form"]').forEach(function(el){
-      el.addEventListener('click', function(e){
-        e.preventDefault();
-        var target = document.getElementById('cta-form');
-        if (target) {
-          target.scrollIntoView({behavior:'smooth', block:'start'});
-          // Focus the email input after scroll settles
-          setTimeout(function(){
-            var input = document.getElementById('intro-email');
-            if (input) input.focus();
-          }, 600);
-        }
-      });
-    });
   })();
 
-  // Form submit: compose an email to geoffrey@hellotomo.ai with the user's address
+  var INTRO_CAL_URL = 'https://cal.hellotomo.ai/welcome';
+
   function submitIntro(e){
     e.preventDefault();
     var emailInput = document.getElementById('intro-email');
     var email = emailInput ? emailInput.value.trim() : '';
-    if (!email) return false;
-    var subject = encodeURIComponent('Request an introduction · TOMO');
-    var body = encodeURIComponent(
-      'Hello Geoffrey,\n\n' +
-      'I would like to request an introduction to TOMO.\n\n' +
-      'My work email: ' + email + '\n\n' +
-      'A few lines about my fund or my raise:\n\n'
-    );
-    window.location.href = 'mailto:geoffrey@tomosolutions.ai?subject=' + subject + '&body=' + body;
+    if (!email) {
+      if (emailInput) emailInput.focus();
+      return false;
+    }
+    var url = INTRO_CAL_URL + (INTRO_CAL_URL.indexOf('?') >= 0 ? '&' : '?') + 'email=' + encodeURIComponent(email);
+    window.open(url, '_blank', 'noopener,noreferrer');
     return false;
   }
 </script>
