@@ -1,0 +1,3 @@
+# Static marketing HTML (synced assets → public). App source is TypeScript/React.
+assets/** linguist-detectable=false
+public/** linguist-detectable=false
