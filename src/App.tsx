@@ -777,7 +777,7 @@ export default function App() {
       <Routes>
         <Route
           path="/"
-          element={<Navigate to="/tomo_private_circle_v25.html" replace />}
+          element={<Navigate to="/home.html" replace />}
         />
         <Route path="/scheduling" element={<LandingPage />} />
         <Route path="/terms" element={<TermsPage />} />

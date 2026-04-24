@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "sync:static": "cp assets/tomo_private_circle_v25.html public/tomo_private_circle_v25.html && cp assets/journal-fat-middle.html public/journal-fat-middle.html && cp assets/journal-signals.html public/journal-signals.html && cp assets/journal-momentum.html public/journal-momentum.html",
+    "sync:static": "cp assets/home.html public/home.html && cp assets/journal-fat-middle.html public/journal-fat-middle.html && cp assets/journal-signals.html public/journal-signals.html && cp assets/journal-momentum.html public/journal-momentum.html",
     "predev": "npm run sync:static",
     "prebuild": "npm run sync:static",
     "dev": "vite",
