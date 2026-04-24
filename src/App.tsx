@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from "react";
-import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
+import React, { useState, useCallback, useLayoutEffect } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { CheckCircle2, Shield } from "lucide-react";
 
 /* ============================
@@ -655,15 +655,15 @@ function TermsPage() {
     <div className="min-h-dvh bg-[#e3e2d5] text-neutral-900">
       <header className="sticky top-0 z-30 bg-[#e3e2d5]/80 backdrop-blur border-b border-neutral-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
+          <a href="/home.html" className="flex items-center gap-2">
             <img src="/Tomo_FileFormats-02.png" alt="Tomo" className="h-8 w-auto" />
-          </Link>
-          <Link
-            to="/"
+          </a>
+          <a
+            href="/home.html"
             className="text-sm font-medium text-neutral-700 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/10 rounded-md px-1 py-1"
           >
             Home
-          </Link>
+          </a>
         </div>
       </header>
 
@@ -771,14 +771,20 @@ function TermsPage() {
   );
 }
 
+function RedirectToHomeHtml() {
+  useLayoutEffect(() => {
+    window.location.replace(
+      "/home.html" + window.location.search + window.location.hash
+    );
+  }, []);
+  return null;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={<Navigate to="/home.html" replace />}
-        />
+        <Route path="/" element={<RedirectToHomeHtml />} />
         <Route path="/scheduling" element={<LandingPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
@@ -792,15 +798,15 @@ function PrivacyPage() {
     <div className="min-h-dvh bg-[#e3e2d5] text-neutral-900">
       <header className="sticky top-0 z-30 bg-[#e3e2d5]/80 backdrop-blur border-b border-neutral-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
+          <a href="/home.html" className="flex items-center gap-2">
             <img src="/Tomo_FileFormats-02.png" alt="Tomo" className="h-8 w-auto" />
-          </Link>
-          <Link
-            to="/"
+          </a>
+          <a
+            href="/home.html"
             className="text-sm font-medium text-neutral-700 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/10 rounded-md px-1 py-1"
           >
             Home
-          </Link>
+          </a>
         </div>
       </header>
 
