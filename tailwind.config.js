@@ -5,6 +5,16 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        /** Match `public/home.html`: Inter Tight body, Newsreader display, Fraunces wordmark */
+        tomo: [
+          '"Inter Tight"',
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+        ],
+        'tomo-display': ['Newsreader', 'Georgia', 'serif'],
+        'tomo-logo': ['Fraunces', 'Georgia', 'serif'],
       },
     },
   },
