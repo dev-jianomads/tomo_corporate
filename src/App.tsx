@@ -56,662 +56,231 @@ function LegalChrome({
 function TermsPage() {
   return (
     <LegalChrome
-      title="Terms & Conditions"
+      title="Terms of Service"
       metaAfterTitle={
         <>
-          <p className="mt-4 text-[#4A5766]">Last updated: July 2026</p>
+          <p className="mt-4 text-[#4A5766]">
+            Effective date: 23 July 2026 · Version 1.0
+          </p>
           <p className="mt-2 text-[#4A5766]">
-            Entity: Tomo Solutions Inc., a Delaware corporation (“Tomo
-            Solutions”, “we”, “us”, or “our”)
+            Entity: Tomo Solutions Inc., a Delaware corporation (“Tomo”, “we”,
+            “us”)
           </p>
           <p className="mt-1 text-[#4A5766]">
-            Product: TOMO — AI for fundraising (“TOMO”, “Tomo”, or “the
-            Service”)
+            Product: Tomo application, tomosolutions.ai, and related services
+            (the “Service”)
           </p>
-          <p className="mt-1 text-[#4A5766]">Contact: support@tomosolutions.ai</p>
         </>
       }
     >
       <div className={LEGAL_DOC_PROSE}>
+        <h2>1. Agreement to terms</h2>
         <p>
-          These Terms &amp; Conditions (“Terms”) govern access to and use of the
-          Service. By accessing or using the Service, creating an account, or
-          clicking to accept these Terms, you agree to be bound by them. If you
-          do not agree, do not use the Service.
-        </p>
-        <p>
-          If you use the Service on behalf of an organisation, you represent that
-          you have authority to bind that organisation, and “you” includes that
-          organisation.
-        </p>
-
-        <h2>1. The Service</h2>
-
-        <h3>1.1 What TOMO is</h3>
-        <p>
-          TOMO is an AI-assisted execution workspace for institutional
-          fundraising and investor relations. Depending on your plan and enabled
-          features, the Service may:
-        </p>
-        <ul>
-          <li>connect to your email, calendar, and meeting tools;</li>
-          <li>ingest pipeline or CRM data you import or connect;</li>
-          <li>
-            analyse relationship and engagement signals across those sources;
-          </li>
-          <li>surface priorities, reminders, and daily briefings;</li>
-          <li>
-            draft outbound messages, follow-ups, and related materials in your
-            voice;
-          </li>
-          <li>
-            support workflows, lists, relationship records, insights, and
-            activity history; and
-          </li>
-          <li>
-            deliver notifications in-product, by email, and (if you enable it)
-            via Slack or similar channels.
-          </li>
-        </ul>
-        <p>
-          TOMO is designed to sit alongside your existing CRM and other systems
-          of record. Unless we expressly agree otherwise in writing, your CRM
-          (or equivalent) remains authoritative for compliance, legal, and audit
-          records of commitments and investor documentation.
+          These Terms of Service (“Terms”) are a binding agreement between you
+          and Tomo Solutions Inc. (“Tomo”, “we”, “us”), governing your access to
+          and use of the Tomo application, tomosolutions.ai, and related services
+          (the “Service”). By creating an account or using the Service, you agree
+          to these Terms and to our <Link to="/privacy">Privacy Policy</Link>. If
+          you use the Service on behalf of an organization, you represent that
+          you are authorized to bind that organization.
         </p>
 
-        <h3>1.2 Human approval for outbound communications</h3>
-        <p>
-          <strong>
-            Nothing is sent on your behalf without your explicit approval.
-          </strong>{" "}
-          Drafts, suggested follow-ups, scheduling proposals, and other outbound
-          communications are presented for your review. You decide whether to
-          approve, edit, skip, or discard them. TOMO does not auto-send investor
-          or other external email.
-        </p>
-        <p>
-          When you approve a send, the message is generally sent from your
-          connected mailbox (for example, your Microsoft 365 or Google Workspace
-          account), not from a Tomo-operated mailbox, unless a different delivery
-          path is expressly configured and disclosed for a specific feature.
-        </p>
-
-        <h3>1.3 AI-generated content — important limitations</h3>
-        <p>
-          The Service uses machine learning and large language models to generate
-          drafts, summaries, classifications, signals, and recommendations. You
-          acknowledge that:
-        </p>
+        <h2>2. Definitions</h2>
         <ul>
           <li>
-            AI output may be incomplete, inaccurate, outdated, or inappropriate
-            for your situation;
+            <strong>“Customer Data”</strong> — data you submit to or authorize
+            the Service to access, including data obtained from connected Google
+            and Microsoft accounts.
           </li>
           <li>
-            you are solely responsible for reviewing all drafts and actions
-            before approving them;
+            <strong>“Connected Account”</strong> — a Google or Microsoft account
+            you authorize Tomo to access via OAuth.
           </li>
           <li>
-            TOMO does <strong>not</strong> provide investment, legal, tax,
-            accounting, regulatory, or fiduciary advice;
-          </li>
-          <li>
-            TOMO does <strong>not</strong> guarantee fundraising outcomes,
-            capital raised, LP conversions, response rates, or time saved; and
-          </li>
-          <li>
-            metrics, signals, and “heating / cooling” style indicators are
-            assistive analytics, not warranties of investor intent.
+            <strong>“AI Features”</strong> — features that use artificial
+            intelligence to generate drafts or insights.
           </li>
         </ul>
 
-        <h3>1.4 Changes to the Service</h3>
+        <h2>3. Eligibility and accounts</h2>
         <p>
-          We may add, modify, or discontinue features at any time. Where a change
-          materially reduces core paid functionality, we will provide reasonable
-          notice where practicable. We may offer beta or early-access features
-          that are provided “as is” and may change or end without notice.
+          You must be at least 18 and capable of forming a binding contract. You
+          are responsible for the security of your account credentials and for
+          all activity under your account. You must provide accurate information
+          and keep it current.
         </p>
 
-        <h3>1.5 Founding Circle and custom agreements</h3>
+        <h2>4. The Service</h2>
         <p>
-          If you participate in a Founding Circle, pilot, or other custom
-          commercial programme, a separate order form, pilot letter, or master
-          services agreement may apply. In the event of conflict between that
-          agreement and these Terms on commercial terms (fees, term, service
-          levels, or special commitments), the signed agreement controls for
-          those topics. These Terms still govern use of the Service unless
-          expressly overridden.
+          Tomo provides relationship-intelligence features for fund managers,
+          including email and calendar analysis, relationship signals and
+          metrics, reminders, meeting context, search, lists, workflows, and
+          AI-assisted drafting. We may modify or improve the Service over time.
         </p>
 
-        <h2>2. Accounts, workspaces, and security</h2>
-
-        <h3>2.1 Registration</h3>
+        <h2>5. Third-party integrations (Google &amp; Microsoft)</h2>
+        <h3>a. Your authorization</h3>
         <p>
-          You must provide accurate, complete, and current account information.
-          You may sign in with email/password or supported identity providers
-          (for example, Google or Microsoft), as offered.
+          When you connect a Google or Microsoft account, you authorize Tomo to
+          access the data covered by the scopes you approve, solely to provide
+          the Service.
+        </p>
+        <h3>b. Compliance with provider terms</h3>
+        <p>
+          Tomo’s use of information received from Google APIs adheres to the{" "}
+          <a
+            href="https://developers.google.com/terms/api-services-user-data-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google API Services User Data Policy
+          </a>
+          , including the Limited Use requirements. Tomo’s use of Microsoft Graph
+          data adheres to the Microsoft APIs Terms of Use. Details of how we
+          handle this data are in our{" "}
+          <Link to="/privacy">Privacy Policy</Link>.
+        </p>
+        <h3>c. Your responsibilities</h3>
+        <p>
+          You are responsible for ensuring you have the right to connect the
+          relevant accounts and to allow Tomo to process the associated data, and
+          for complying with your own organization’s policies and applicable law.
+        </p>
+        <h3>d. Provider changes</h3>
+        <p>
+          Google and Microsoft may change or discontinue their APIs; we are not
+          liable for resulting changes to the Service.
         </p>
 
-        <h3>2.2 Workspaces and teammates</h3>
-        <p>
-          The Service is organised around <strong>workspaces</strong> (teams).
-          Members of a workspace may access shared fundraising data,
-          integrations, drafts, and settings according to the permissions model
-          then in effect. In early releases, workspace members may have
-          substantially equivalent access; role-based restriction may be
-          introduced later. You are responsible for:
-        </p>
-        <ul>
-          <li>who you invite to your workspace;</li>
-          <li>their compliance with these Terms; and</li>
-          <li>activity under your workspace accounts.</li>
-        </ul>
-
-        <h3>2.3 Credentials and OAuth grants</h3>
-        <p>
-          You are responsible for safeguarding login credentials and for OAuth
-          (or similar) grants you authorise to email, calendar, CRM, Slack, or
-          other data sources. You must notify us promptly of any suspected
-          unauthorised access. We are not responsible for unauthorised access
-          resulting from your failure to maintain security of credentials,
-          devices, or upstream accounts.
-        </p>
-
-        <h3>2.4 Age and eligibility</h3>
-        <p>
-          The Service is for business users. You must be at least 18 years old
-          (or the age of majority in your jurisdiction) and able to form a
-          binding contract. The Service is not directed to consumers acting in a
-          personal capacity for non-business use where restricted by law.
-        </p>
-
-        <h2>3. Acceptable use</h2>
-
-        <h3>3.1 Lawful use only</h3>
-        <p>
-          You may use the Service only for lawful purposes and in accordance with
-          these Terms and applicable law (including securities, privacy,
-          anti-spam, and export laws).
-        </p>
-
-        <h3>3.2 Prohibited conduct</h3>
-        <p>You agree not to:</p>
+        <h2>6. Acceptable use</h2>
+        <p>You will not, and will not permit others to:</p>
         <ul>
           <li>
-            interfere with or disrupt the Service, its infrastructure, or other
-            customers;
+            use the Service unlawfully or in violation of Google, Microsoft, or
+            other provider terms;
           </li>
           <li>
-            attempt to gain unauthorised access to systems, accounts, or data;
+            access data you are not authorized to access, or attempt to breach
+            tenant isolation or security controls;
           </li>
+          <li>reverse engineer, scrape, or overload the Service;</li>
           <li>
-            reverse-engineer, decompile, or create derivative works of the
-            Service except to the extent such restriction is prohibited by law;
+            use the Service to send spam or unlawful communications; or
           </li>
-          <li>
-            use scrapers, bots, or automated access except through documented
-            APIs we expressly make available to you;
-          </li>
-          <li>
-            use the Service to send spam, unlawful, deceptive, or harassing
-            communications;
-          </li>
-          <li>upload or process data you do not have rights to use;</li>
-          <li>
-            circumvent usage limits, safety controls, approval gates, or billing
-            mechanisms;
-          </li>
-          <li>
-            misrepresent that AI-generated content was solely human-authored
-            where disclosure is required; or
-          </li>
-          <li>
-            use the Service to build a competing product by systematically
-            extracting non-public features, prompts, or datasets.
-          </li>
+          <li>upload malware or infringe others’ rights.</li>
         </ul>
 
-        <h3>3.3 Suspension</h3>
+        <h2>7. Customer Data and privacy</h2>
         <p>
-          We may suspend or terminate access for misuse, security risk,
-          non-payment, legal obligation, or material breach of these Terms.
+          As between you and Tomo, you retain all rights to Customer Data. You
+          grant Tomo a limited license to process Customer Data solely to provide
+          and secure the Service. Our processing of personal data is described in
+          the <Link to="/privacy">Privacy Policy</Link>, which is incorporated
+          into these Terms. We do not sell Customer Data and do not use Customer
+          Data (including Google or Microsoft data) to train generalized or
+          general-purpose AI models.
         </p>
 
-        <h2>4. Customer content and data licence</h2>
-
-        <h3>4.1 Your ownership</h3>
+        <h2>8. AI Features</h2>
         <p>
-          You (and your licensors) retain ownership of content and data you
-          submit to or sync into the Service, including emails, calendar events,
-          CRM/pipeline records, transcripts, notes, drafts you create or edit,
-          materials you upload, and workspace configuration (“Customer Content”).
+          AI Features generate draft content and insights for your review. All
+          AI-generated communications are proposal-only and are never sent
+          without your explicit, per-message approval. AI output may contain
+          errors; you are responsible for reviewing it before acting. AI
+          processing is performed on an enterprise configuration with no
+          retention of your data for model training (see{" "}
+          <Link to="/privacy">Privacy Policy</Link>, Section 6).
         </p>
 
-        <h3>4.2 Licence to Tomo Solutions</h3>
+        <h2>9. Intellectual property</h2>
         <p>
-          You grant Tomo Solutions a worldwide, non-exclusive licence to host,
-          store, process, transmit, display, and create derivative works from
-          Customer Content{" "}
-          <strong>
-            solely as needed to provide, secure, maintain, and support the
-            Service
-          </strong>
-          , including:
-        </p>
-        <ul>
-          <li>syncing and indexing connected data sources;</li>
-          <li>generating signals, metrics, reminders, and briefs;</li>
-          <li>generating and storing drafts for your approval;</li>
-          <li>running AI inference through our subprocessors;</li>
-          <li>delivering notifications you enable; and</li>
-          <li>
-            creating backups, logs, and security/abuse monitoring artefacts.
-          </li>
-        </ul>
-        <p>
-          This licence ends when Customer Content is deleted from our systems in
-          accordance with our Privacy Policy and retention practices, except for
-          copies retained as required by law or for legitimate residual purposes
-          described in the Privacy Policy (for example, scrubbed audit records).
+          The Service, including its software, design, and content (excluding
+          Customer Data), is owned by Tomo and its licensors and is protected by
+          intellectual-property laws. These Terms grant you a limited,
+          non-exclusive, non-transferable right to use the Service. Feedback you
+          provide may be used by us without obligation to you.
         </p>
 
-        <h3>4.3 Your responsibilities for Customer Content</h3>
+        <h2>10. Fees</h2>
         <p>
-          You represent that you have all rights, consents, and lawful bases
-          needed to provide Customer Content to us and to instruct us to process
-          it (including personal data about limited partners, prospects,
-          colleagues, and other contacts). You are responsible for the accuracy
-          of data you enter and for how you use outputs in your fundraising
-          activities.
+          If the Service is offered on a paid basis, applicable fees, billing
+          terms, and refund policy will be presented at purchase and form part of
+          these Terms. Where the Service is provided at no charge, we may change
+          or discontinue it at our discretion.
         </p>
 
-        <h3>4.4 Feedback</h3>
+        <h2>11. Confidentiality</h2>
         <p>
-          If you provide feedback or suggestions about the Service, we may use
-          them without restriction or obligation to you.
+          Each party will protect the other’s confidential information with
+          reasonable care and use it only to perform under these Terms.
         </p>
 
-        <h2>5. Privacy, training, and data protection</h2>
-
-        <h3>5.1 Privacy Policy</h3>
+        <h2>12. Disclaimers</h2>
         <p>
-          Our <Link to="/privacy">Privacy Policy</Link> explains how we collect
-          and process personal data and forms part of these Terms.
+          The Service is provided “as is” and “as available.” To the maximum
+          extent permitted by law, Tomo disclaims all warranties, express or
+          implied, including merchantability, fitness for a particular purpose,
+          and non-infringement. Tomo does not warrant that the Service will be
+          uninterrupted, error-free, or secure against all threats.
         </p>
 
-        <h3>5.2 No training on your Customer Content (current practice)</h3>
+        <h2>13. Limitation of liability</h2>
         <p>
-          <strong>
-            We do not use your Customer Content to train our foundation models or
-            to improve generalised models that serve other customers
-          </strong>
-          , except:
-        </p>
-        <ul>
-          <li>
-            where you give explicit written consent and (if required) a separate
-            data processing addendum for a future programme; or
-          </li>
-          <li>
-            for{" "}
-            <strong>
-              tone calibration and personalisation for your own user/workspace
-            </strong>{" "}
-            — limited profiles or embeddings derived from your sent-mail and
-            related writing samples so drafts sound like you. These
-            personalisation artefacts are used to provide the Service to you and
-            are not used to train foundation models for other customers.
-          </li>
-        </ul>
-        <p>
-          We configure our LLM providers for{" "}
-          <strong>zero retention of prompts and responses</strong> where that
-          option is available and contractually supported, as further described
-          in the Privacy Policy.
+          To the maximum extent permitted by law, Tomo will not be liable for
+          indirect, incidental, special, consequential, or punitive damages, or
+          for lost profits, revenues, or data. Tomo’s total aggregate liability
+          arising out of or relating to the Service will not exceed the greater
+          of the amounts you paid to Tomo in the 12 months before the claim, or
+          USD 100.
         </p>
 
-        <h3>5.3 Data processing agreement</h3>
+        <h2>14. Indemnification</h2>
         <p>
-          Where required by law (for example, GDPR) or by your institutional
-          diligence, we will enter into a Data Processing Agreement (“DPA”). If a
-          DPA is executed, it governs processing of personal data to the extent
-          of conflict with these Terms on that subject.
+          You will indemnify and hold Tomo harmless from claims arising out of
+          your Customer Data, your use of the Service in violation of these Terms
+          or applicable law, or your violation of any third-party rights or
+          provider terms.
         </p>
 
-        <h3>5.4 Confidentiality</h3>
+        <h2>15. Term, termination, and data deletion</h2>
         <p>
-          We will treat Customer Content as confidential and use it only as
-          permitted by these Terms and the Privacy Policy, except for information
-          that is or becomes public through no fault of ours, was independently
-          developed, or was rightfully received from a third party without duty
-          of confidentiality.
+          These Terms apply while you use the Service. You may stop using and
+          delete your account at any time (
+          <Link to="/privacy">Privacy Policy</Link>, Section 10). We may suspend
+          or terminate access for material breach, legal requirement, or risk to
+          the Service. On termination, we revoke Connected Account tokens and
+          delete Customer Data in accordance with the Privacy Policy (including
+          the 30-day deletion process).
         </p>
 
-        <h2>6. Third-party services and integrations</h2>
-
-        <h3>6.1 Optional integrations</h3>
+        <h2>16. Changes to these Terms</h2>
         <p>
-          The Service may integrate with third-party providers you choose to
-          connect, which may include (as available over time):
-        </p>
-        <ul>
-          <li>
-            Microsoft 365 / Outlook (mail, calendar, contacts, Teams
-            meetings/transcripts);
-          </li>
-          <li>Google Workspace (Gmail, Calendar, Contacts, Meet);</li>
-          <li>
-            CRM or pipeline sources via file import (CSV/Excel and similar) and,
-            where offered, native read connectors (for example Affinity or
-            Backstop);
-          </li>
-          <li>Slack (for notifications you enable);</li>
-          <li>payment processors (for example Stripe); and</li>
-          <li>
-            other providers listed in our Privacy Policy or product
-            documentation.
-          </li>
-        </ul>
-        <p>
-          Availability of a connector depends on product roadmap, your licence
-          with the third party, and successful OAuth or credential setup.
-          Marketing references to future or planned connectors do not create a
-          contractual obligation to ship them on a particular date.
+          We may update these Terms from time to time. Material changes will be
+          posted here with a revised effective date; continued use after changes
+          take effect constitutes acceptance.
         </p>
 
-        <h3>6.2 Third-party terms</h3>
-        <p>
-          Your use of third-party services is subject to those providers’ terms
-          and privacy policies. Tomo Solutions is not responsible for the
-          availability, accuracy, security, or acts of third-party services. If a
-          provider changes APIs, scopes, or pricing, related TOMO features may
-          degrade or require reconfiguration.
-        </p>
-
-        <h3>6.3 Permissions you grant upstream</h3>
-        <p>
-          Connecting a data source requires you to grant permissions via that
-          provider’s consent screen. You can disconnect integrations in product
-          settings (where available). Disconnecting stops new ingestion;
-          historical data already processed is retained until deleted under our
-          retention and deletion practices unless you request earlier purge as
-          described in the Privacy Policy.
-        </p>
-
-        <h2>7. Fees and payment</h2>
-
-        <h3>7.1 Plans and pricing</h3>
-        <p>
-          Certain features require payment. Prices, billing cycles, taxes, and
-          refund rules are as stated on our website, checkout flow, order form,
-          or invoice at the time of purchase.
-        </p>
-
-        <h3>7.2 Authorisation</h3>
-        <p>
-          If you subscribe to a paid plan, you authorise us (and our payment
-          processor) to charge the selected payment method on a recurring basis
-          until you cancel. You must keep billing information current.
-        </p>
-
-        <h3>7.3 Cancellation</h3>
-        <p>
-          You may cancel as described in account settings or your order form.
-          Unless stated otherwise, cancellation takes effect at the end of the
-          then-current billing period. Fees already charged are non-refundable
-          except where required by law or expressly stated in writing.
-        </p>
-
-        <h3>7.4 Trials and special commercial terms</h3>
-        <p>
-          Any trial, pilot, “value guarantee,” Founding Circle pricing, or
-          introduction-only commercial arrangement applies only as set out in the
-          applicable order form or written offer. Public website marketing
-          language does not, by itself, create a refund or termination right
-          beyond what is stated in these Terms or your signed agreement.
-        </p>
-
-        <h3>7.5 Late payment</h3>
-        <p>
-          We may suspend the Service for overdue amounts after notice. You remain
-          responsible for fees incurred before suspension or termination.
-        </p>
-
-        <h2>8. Intellectual property</h2>
-
-        <h3>8.1 Our IP</h3>
-        <p>
-          The Service — including software, interfaces, workflows, models we
-          provide (excluding Customer Content), documentation, trademarks, and
-          branding — is owned by Tomo Solutions or its licensors. These Terms do
-          not transfer ownership to you.
-        </p>
-
-        <h3>8.2 Licence to you</h3>
-        <p>
-          Subject to these Terms and timely payment of applicable fees, we grant
-          you a limited, non-exclusive, non-transferable, non-sublicensable,
-          revocable licence to access and use the Service for your internal
-          business fundraising and IR operations.
-        </p>
-
-        <h3>8.3 Restrictions</h3>
-        <p>
-          You may not copy, modify, distribute, sell, lease, or publicly display
-          the Service except as allowed by these Terms or written permission from
-          us.
-        </p>
-
-        <h2>9. Support and institutional diligence</h2>
-        <p>
-          We provide support via the channels we publish (for example, email at
-          support@tomosolutions.ai). Founding Circle or enterprise customers may
-          receive additional onboarding or review sessions as agreed in writing.
-        </p>
-        <p>
-          For security diligence, we may make documentation available under NDA
-          (for example, architecture summaries, control descriptions, or
-          attestation reports when available). SOC 2, CASA, or similar
-          attestations are pursued according to our compliance roadmap and are
-          not automatically warranted as complete on any given date unless
-          confirmed in writing.
-        </p>
-
-        <h2>10. Disclaimers</h2>
-        <p>
-          TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICE IS PROVIDED “AS IS”
-          AND “AS AVAILABLE,” WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS,
-          IMPLIED, OR STATUTORY, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY,
-          FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
-        </p>
-        <p>
-          We do not warrant that the Service will be uninterrupted, error-free,
-          or free of harmful components, or that defects will be corrected. We do
-          not warrant that integrations will remain available on unchanged terms
-          from third parties.
-        </p>
-        <p>
-          Some jurisdictions do not allow certain disclaimers; in those
-          jurisdictions, disclaimers apply to the fullest extent permitted.
-        </p>
-
-        <h2>11. Limitation of liability</h2>
-        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
-        <ul>
-          <li>
-            Tomo Solutions and its officers, directors, employees, and agents
-            will not be liable for any indirect, incidental, special,
-            consequential, exemplary, or punitive damages, or for lost profits,
-            lost revenue, lost capital commitments, loss of data, business
-            interruption, or cost of substitute services, even if advised of the
-            possibility of such damages; and
-          </li>
-          <li>
-            Tomo Solutions’ total aggregate liability arising out of or relating
-            to the Service or these Terms will not exceed the amounts you paid to
-            Tomo Solutions for the Service in the twelve (12) months preceding
-            the claim.
-          </li>
-        </ul>
-        <p>
-          The above limitations apply regardless of theory of liability
-          (contract, tort, including negligence, strict liability, or otherwise)
-          and form an essential basis of the bargain. Some jurisdictions do not
-          allow certain limitations; in those cases, our liability is limited to
-          the maximum extent permitted by law.
-        </p>
-
-        <h2>12. Indemnification</h2>
-        <p>
-          You will indemnify, defend, and hold harmless Tomo Solutions and its
-          officers, directors, employees, and agents from and against any claims,
-          damages, losses, liabilities, costs, and expenses (including reasonable
-          legal fees) arising out of or related to:
-        </p>
-        <ul>
-          <li>your Customer Content;</li>
-          <li>
-            your use of the Service in violation of these Terms or law;
-          </li>
-          <li>
-            your communications with investors or other third parties (including
-            messages you approve and send);
-          </li>
-          <li>
-            disputes between you and your investors, limited partners, employees,
-            or counterparties; or
-          </li>
-          <li>
-            your infringement or violation of third-party rights.
-          </li>
-        </ul>
-
-        <h2>13. Term and termination</h2>
-
-        <h3>13.1 Term</h3>
-        <p>
-          These Terms apply from your first access or acceptance until
-          terminated.
-        </p>
-
-        <h3>13.2 Termination by you</h3>
-        <p>
-          You may stop using the Service at any time and may request account or
-          workspace closure through product settings or by contacting
-          support@tomosolutions.ai.
-        </p>
-
-        <h3>13.3 Termination by us</h3>
-        <p>
-          We may suspend or terminate access immediately for material breach,
-          unlawful use, security risk, or as otherwise stated in these Terms. We
-          may also terminate for convenience with reasonable notice if we
-          discontinue the Service generally.
-        </p>
-
-        <h3>13.4 Effect of termination</h3>
-        <p>
-          Upon termination, your licence to use the Service ends. Provisions that
-          by their nature should survive — including ownership, Customer Content
-          licence for residual retention/deletion wind-down, confidentiality,
-          disclaimers, limitations of liability, indemnities, and governing law —
-          survive termination. Deletion of Customer Content follows the Privacy
-          Policy (including any soft-delete grace period).
-        </p>
-
-        <h2>14. Governing law and disputes</h2>
-
-        <h3>14.1 Governing law</h3>
+        <h2>17. Governing law and disputes</h2>
         <p>
           These Terms are governed by the laws of the State of Delaware, USA,
-          without regard to conflict-of-law principles.
+          without regard to conflict-of-laws rules. The courts of the State of
+          Delaware, USA will have exclusive jurisdiction, except where mandatory
+          local law provides otherwise.
         </p>
 
-        <h3>14.2 Informal resolution</h3>
+        <h2>18. Contact</h2>
         <p>
-          Before filing a claim, either party must attempt in good faith to
-          resolve the dispute informally by written notice to the other party. If
-          not resolved within thirty (30) days of notice, either party may
-          proceed as below.
-        </p>
-
-        <h3>14.3 Venue</h3>
-        <p>
-          Subject to mandatory consumer or data-protection rights that cannot be
-          waived, exclusive jurisdiction and venue lie in the state or federal
-          courts located in Delaware, and each party consents to personal
-          jurisdiction there.
-        </p>
-
-        <h2>15. Miscellaneous</h2>
-        <p>
-          <strong>15.1 Entire agreement.</strong> These Terms, the Privacy
-          Policy, any DPA, and any applicable order form or signed commercial
-          agreement constitute the entire agreement between you and Tomo
-          Solutions regarding the Service and supersede prior or contemporaneous
-          understandings on that subject.
+          Tomo Solutions Inc. Email:{" "}
+          <a href="mailto:privacy@tomosolutions.ai">privacy@tomosolutions.ai</a>
+          . For general support:{" "}
+          <a href="mailto:support@tomosolutions.ai">support@tomosolutions.ai</a>
+          . Address: 1 Ferry Building, Suite 201, San Francisco, CA 94111.
         </p>
         <p>
-          <strong>15.2 Conflicts.</strong> Order of precedence for conflicts:
-          (1) signed order form / MSA commercial terms; (2) DPA (for
-          personal-data processing); (3) these Terms; (4) Privacy Policy (for
-          privacy disclosures); (5) product documentation.
-        </p>
-        <p>
-          <strong>15.3 Severability.</strong> If any provision is unenforceable,
-          the remainder remains in effect.
-        </p>
-        <p>
-          <strong>15.4 Force majeure.</strong> We are not liable for delays or
-          failures caused by events beyond reasonable control, including outages
-          of cloud or identity providers, network failures, labour disputes,
-          pandemics, natural disasters, war, or government action.
-        </p>
-        <p>
-          <strong>15.5 Assignment.</strong> You may not assign these Terms
-          without our prior written consent. We may assign them in connection
-          with a merger, acquisition, corporate reorganisation, or sale of
-          assets.
-        </p>
-        <p>
-          <strong>15.6 No waiver.</strong> Failure to enforce a provision is not
-          a waiver.
-        </p>
-        <p>
-          <strong>15.7 Notices.</strong> We may notify you via email, in-product
-          message, or posting on our website. Legal notices to us should be sent
-          to support@tomosolutions.ai with a copy retained for your records,
-          unless we designate another address.
-        </p>
-        <p>
-          <strong>15.8 Export and sanctions.</strong> You must comply with
-          applicable export control and sanctions laws and may not use the
-          Service if you are prohibited from receiving US or other applicable
-          services under those laws.
-        </p>
-        <p>
-          <strong>15.9 Language.</strong> These Terms are in English. Any
-          translation is for convenience only.
-        </p>
-        <p>
-          <strong>15.10 Changes to Terms.</strong> We may update these Terms from
-          time to time. The “Last updated” date will change when we do. Material
-          changes will be notified by email or in-product notice where
-          appropriate. Continued use after the effective date constitutes
-          acceptance of the updated Terms, except where applicable law requires a
-          different method of acceptance.
-        </p>
-
-        <h2>Contact</h2>
-        <p>
-          <strong>Tomo Solutions Inc.</strong>
-        </p>
-        <p>Email: support@tomosolutions.ai</p>
-        <p>
-          Website:{" "}
-          <a href="https://tomosolutions.ai">https://tomosolutions.ai</a>
+          These Terms are designed to be consistent with the Google API Services
+          User Data Policy (including Limited Use), the Microsoft APIs Terms of
+          Use, and to support SOC 2 and data-protection obligations. They
+          incorporate the Tomo Privacy Policy by reference.
         </p>
       </div>
     </LegalChrome>
@@ -745,16 +314,20 @@ function PrivacyPage() {
       title="Privacy Policy"
       metaAfterTitle={
         <>
-          <p className="mt-4 text-[#4A5766]">Last updated: July 2026</p>
+          <p className="mt-4 text-[#4A5766]">
+            Effective date: 23 July 2026 · Version 1.0
+          </p>
           <p className="mt-2 text-[#4A5766]">
             Entity: Tomo Solutions Inc., a Delaware corporation (“Tomo
-            Solutions”, “we”, “us”, or “our”)
+            Solutions”, “Tomo”, “we”, “us”, or “our”)
           </p>
           <p className="mt-1 text-[#4A5766]">
             Product: TOMO — AI for fundraising (“TOMO”, “Tomo”, or “the
             Service”)
           </p>
-          <p className="mt-1 text-[#4A5766]">Contact: support@tomosolutions.ai</p>
+          <p className="mt-1 text-[#4A5766]">
+            Contact: privacy@tomosolutions.ai · support@tomosolutions.ai
+          </p>
         </>
       }
     >
@@ -763,7 +336,7 @@ function PrivacyPage() {
           This Privacy Policy explains how we collect, use, disclose, retain, and
           protect personal information in connection with the Service and our
           websites (including tomosolutions.ai). It should be read together with
-          our <Link to="/terms">Terms &amp; Conditions</Link>.
+          our <Link to="/terms">Terms of Service</Link>.
         </p>
         <p>
           If you use TOMO on behalf of a fund, firm, or other organisation, that
@@ -786,7 +359,8 @@ function PrivacyPage() {
           <li>
             personal data contained in Customer Content that customers sync or
             upload (for example, limited partner / allocator contact details and
-            correspondence).
+            correspondence), including data from Connected Accounts (Google and
+            Microsoft).
           </li>
         </ul>
         <p>
@@ -864,9 +438,7 @@ function PrivacyPage() {
             fields;
           </li>
           <li>interaction history and notes you store in TOMO; and</li>
-          <li>
-            materials you upload for drafting or workflow context.
-          </li>
+          <li>materials you upload for drafting or workflow context.</li>
         </ul>
 
         <h3>2.4 Product-generated data</h3>
@@ -877,7 +449,7 @@ function PrivacyPage() {
           </li>
           <li>
             Tone-calibration / personalisation artefacts derived from your
-            writing samples so drafts can match your voice (see Section 5).
+            writing samples so drafts can match your voice (see Section 6).
           </li>
           <li>
             Approvals, edits, skips, and related audit events for outbound
@@ -1014,85 +586,7 @@ function PrivacyPage() {
           </table>
         </div>
 
-        <h2>5. Artificial intelligence, training, and model providers</h2>
-
-        <h3>5.1 How AI is used</h3>
-        <p>
-          We use AI systems (currently including Google Cloud Vertex AI / Gemini
-          for production inference, subject to change with notice via our
-          sub-processor disclosures) to:
-        </p>
-        <ul>
-          <li>draft messages and summaries;</li>
-          <li>classify or prioritise items;</li>
-          <li>support contact suggestions and workflow drafting; and</li>
-          <li>generate other in-product assistance.</li>
-        </ul>
-        <p>
-          Prompts may include relevant Customer Content (for example recent
-          correspondence excerpts, CRM fields, or transcript snippets) needed for
-          the task.
-        </p>
-
-        <h3>5.2 No training on customer data for shared models</h3>
-        <p>
-          <strong>
-            We do not use Customer Content to train foundation models or to
-            improve generalised models that serve other customers.
-          </strong>
-        </p>
-        <p>
-          Any future programme that would use Customer Content for shared model
-          training would require <strong>explicit consent</strong> and an updated
-          DPA or addendum before it begins.
-        </p>
-
-        <h3>5.3 Tone calibration (personalisation for you only)</h3>
-        <p>
-          To make drafts sound like you, we may build{" "}
-          <strong>per-user or per-workspace personalisation artefacts</strong>{" "}
-          (for example style profiles) from your sent messages and related
-          writing samples. These artefacts:
-        </p>
-        <ul>
-          <li>
-            exist to provide the Service <strong>to you</strong>;
-          </li>
-          <li>
-            are <strong>not</strong> used to train foundation models for other
-            customers; and
-          </li>
-          <li>
-            are deleted or de-identified when your account/workspace is deleted
-            according to our retention rules.
-          </li>
-        </ul>
-
-        <h3>5.4 Zero retention at the LLM provider (where available)</h3>
-        <p>
-          We configure supported LLM providers for{" "}
-          <strong>zero data retention</strong> of prompts and responses (process
-          in-memory / no training use under the provider’s enterprise terms),
-          subject to the provider’s then-current documentation and our
-          contractual terms with them. Operational API metadata (for example
-          request IDs, token counts) may still be logged by providers or by us
-          for reliability and billing.
-        </p>
-
-        <h3>5.5 Important clarification about storage</h3>
-        <p>
-          AI inference may be ephemeral at the model provider, but{" "}
-          <strong>
-            TOMO itself stores Customer Content as needed to operate the product
-          </strong>{" "}
-          — including email bodies, metadata, drafts, transcripts, signals, and
-          audit logs — under the retention rules in Section 8. Claims that
-          content is “never stored” apply only to certain provider-side inference
-          settings, <strong>not</strong> to TOMO’s application database and
-          related storage.
-        </p>
-
-        <h2>6. When we share personal data</h2>
+        <h2>5. When we share personal data</h2>
         <p>
           We do not sell personal information for money. We do not “sell” or
           “share” personal information for cross-context behavioural advertising
@@ -1101,7 +595,7 @@ function PrivacyPage() {
         </p>
         <p>We disclose personal data only as follows:</p>
 
-        <h3>6.1 Sub-processors / service providers</h3>
+        <h3>5.1 Sub-processors / service providers</h3>
         <p>
           Vendors that process data on our instructions to run the Service.
           Current categories and representative providers:
@@ -1200,32 +694,32 @@ function PrivacyPage() {
           security replacements.
         </p>
 
-        <h3>6.2 Integrations you enable</h3>
+        <h3>5.2 Integrations you enable</h3>
         <p>
           When you connect a third party, data flows according to the permissions
           you grant that party.
         </p>
 
-        <h3>6.3 Workspace teammates and authorised users</h3>
+        <h3>5.3 Workspace teammates and authorised users</h3>
         <p>
           Members of your workspace can access shared Customer Content according
           to product permissions.
         </p>
 
-        <h3>6.4 Professional advisors and corporate transactions</h3>
+        <h3>5.4 Professional advisors and corporate transactions</h3>
         <p>
           Advisors under confidentiality obligations; or parties to a merger,
           acquisition, financing, or sale of assets, subject to appropriate
           protections.
         </p>
 
-        <h3>6.5 Legal and safety</h3>
+        <h3>5.5 Legal and safety</h3>
         <p>
           Where required by law, regulation, legal process, or to protect rights,
           safety, and security of Tomo Solutions, our users, or others.
         </p>
 
-        <h3>6.6 Staff support access</h3>
+        <h3>5.6 Staff support access</h3>
         <p>
           In early customer programmes, authorised Tomo Solutions personnel may
           access workspace data as needed for onboarding and support, under
@@ -1233,6 +727,127 @@ function PrivacyPage() {
           impersonation is not a standard V1 feature; support is typically
           provided with your participation (for example screen share) plus
           limited backend operational access when necessary.
+        </p>
+
+        <h2>6. Artificial intelligence, training, and Google / Microsoft Limited Use</h2>
+
+        <h3>6.1 How AI is used</h3>
+        <p>
+          We use AI systems (currently including Google Cloud Vertex AI / Gemini
+          for production inference, subject to change with notice via our
+          sub-processor disclosures) to:
+        </p>
+        <ul>
+          <li>draft messages and summaries;</li>
+          <li>classify or prioritise items;</li>
+          <li>support contact suggestions and workflow drafting; and</li>
+          <li>generate other in-product assistance.</li>
+        </ul>
+        <p>
+          Prompts may include relevant Customer Content (for example recent
+          correspondence excerpts, CRM fields, or transcript snippets) needed for
+          the task.
+        </p>
+
+        <h3>6.2 No training on customer data for shared models</h3>
+        <p>
+          <strong>
+            We do not use Customer Data (including Google or Microsoft user data)
+            to train foundation models or to improve generalised or
+            general-purpose AI models that serve other customers.
+          </strong>
+        </p>
+        <p>
+          Any future programme that would use Customer Content for shared model
+          training would require <strong>explicit consent</strong> and an updated
+          DPA or addendum before it begins.
+        </p>
+
+        <h3>6.3 Tone calibration (personalisation for you only)</h3>
+        <p>
+          To make drafts sound like you, we may build{" "}
+          <strong>per-user or per-workspace personalisation artefacts</strong>{" "}
+          (for example style profiles) from your sent messages and related
+          writing samples. These artefacts:
+        </p>
+        <ul>
+          <li>
+            exist to provide the Service <strong>to you</strong>;
+          </li>
+          <li>
+            are <strong>not</strong> used to train foundation models for other
+            customers; and
+          </li>
+          <li>
+            are deleted or de-identified when your account/workspace is deleted
+            according to our retention rules.
+          </li>
+        </ul>
+
+        <h3>6.4 Zero retention at the LLM provider (where available)</h3>
+        <p>
+          AI processing is performed on an enterprise configuration. We configure
+          supported LLM providers for <strong>zero data retention</strong> of
+          prompts and responses (process in-memory / no training use under the
+          provider’s enterprise terms), subject to the provider’s then-current
+          documentation and our contractual terms with them. Operational API
+          metadata (for example request IDs, token counts) may still be logged by
+          providers or by us for reliability and billing.
+        </p>
+
+        <h3>6.5 Google API Services User Data Policy (Limited Use)</h3>
+        <p>
+          Tomo’s use and transfer to any other app of information received from
+          Google APIs will adhere to the{" "}
+          <a
+            href="https://developers.google.com/terms/api-services-user-data-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google API Services User Data Policy
+          </a>
+          , including the Limited Use requirements. Among other things, this
+          means we:
+        </p>
+        <ul>
+          <li>
+            use Google user data only to provide or improve user-facing features
+            that are prominent in the requesting application’s user interface;
+          </li>
+          <li>
+            do not transfer Google user data to third parties except as necessary
+            to provide or improve those features, for security purposes, or as
+            required to comply with applicable law;
+          </li>
+          <li>
+            do not use Google user data for serving advertisements; and
+          </li>
+          <li>
+            do not allow humans to read Google user data unless we have your
+            affirmative agreement for specific messages, it is necessary for
+            security or compliance, or the data is aggregated and anonymised.
+          </li>
+        </ul>
+
+        <h3>6.6 Microsoft Graph data</h3>
+        <p>
+          Tomo’s use of Microsoft Graph data adheres to the Microsoft APIs Terms
+          of Use. We process Microsoft mailbox, calendar, and related data only
+          as needed to provide the Service you enable, and we do not use that
+          data to train generalized AI models.
+        </p>
+
+        <h3>6.7 Important clarification about storage</h3>
+        <p>
+          AI inference may be ephemeral at the model provider, but{" "}
+          <strong>
+            TOMO itself stores Customer Content as needed to operate the product
+          </strong>{" "}
+          — including email bodies, metadata, drafts, transcripts, signals, and
+          audit logs — under the retention rules in Section 8. Claims that
+          content is “never stored” apply only to certain provider-side inference
+          settings, <strong>not</strong> to TOMO’s application database and
+          related storage.
         </p>
 
         <h2>7. International transfers and data location</h2>
@@ -1394,7 +1009,7 @@ function PrivacyPage() {
           confirmed in diligence materials, not assumed from this Policy alone.
         </p>
 
-        <h2>10. Your rights and choices</h2>
+        <h2>10. Your rights, choices, and account deletion</h2>
 
         <h3>10.1 Product controls</h3>
         <p>Depending on features available to you, you may:</p>
@@ -1408,7 +1023,27 @@ function PrivacyPage() {
           <li>approve, edit, or reject AI drafts before sending.</li>
         </ul>
 
-        <h3>10.2 Privacy rights (GDPR, UK GDPR, CCPA/CPRA, and similar)</h3>
+        <h3>10.2 Account and data deletion</h3>
+        <p>
+          You may stop using the Service and request account or workspace
+          deletion at any time through product settings (where available) or by
+          contacting us. On deletion:
+        </p>
+        <ul>
+          <li>
+            we revoke Connected Account OAuth tokens (Google and Microsoft);
+          </li>
+          <li>
+            Customer Data enters a soft-delete grace period of about{" "}
+            <strong>30 days</strong>, then is hard-deleted or scrubbed from
+            active systems; and
+          </li>
+          <li>
+            backups expire according to provider rolling schedules.
+          </li>
+        </ul>
+
+        <h3>10.3 Privacy rights (GDPR, UK GDPR, CCPA/CPRA, and similar)</h3>
         <p>
           Subject to verification and legal exceptions, you may have the right
           to:
@@ -1441,8 +1076,9 @@ function PrivacyPage() {
           </li>
         </ul>
         <p>
-          <strong>How to submit a request:</strong> email
-          support@tomosolutions.ai with the subject line “Privacy Request”.
+          <strong>How to submit a request:</strong> email{" "}
+          <a href="mailto:privacy@tomosolutions.ai">privacy@tomosolutions.ai</a>{" "}
+          (or support@tomosolutions.ai) with the subject line “Privacy Request”.
         </p>
         <ul>
           <li>
@@ -1456,14 +1092,14 @@ function PrivacyPage() {
           </li>
         </ul>
 
-        <h3>10.3 “Do Not Sell or Share”</h3>
+        <h3>10.4 “Do Not Sell or Share”</h3>
         <p>
           We do not sell personal information or share it for cross-context
           behavioural advertising. If that changes, we will update this Policy
           and provide required opt-out mechanisms.
         </p>
 
-        <h3>10.4 Marketing opt-out</h3>
+        <h3>10.5 Marketing opt-out</h3>
         <p>
           You can unsubscribe from marketing emails via the link in those emails
           or by contacting us. Service/transactional messages are not marketing
@@ -1504,18 +1140,28 @@ function PrivacyPage() {
 
         <h2>14. Changes to this Policy</h2>
         <p>
-          We may update this Policy from time to time. The “Last updated” date
-          will change when we do. Material changes will be communicated by email
-          or in-product notice where appropriate. Continued use after the
-          effective date means you acknowledge the updated Policy, except where
-          law requires a different consent mechanism.
+          We may update this Policy from time to time. The effective date and
+          version will change when we do. Material changes will be communicated
+          by email or in-product notice where appropriate. Continued use after
+          the effective date means you acknowledge the updated Policy, except
+          where law requires a different consent mechanism.
         </p>
 
         <h2>15. Contact and complaints</h2>
         <p>
           <strong>Tomo Solutions Inc.</strong>
         </p>
-        <p>Email: support@tomosolutions.ai</p>
+        <p>
+          Address: 1 Ferry Building, Suite 201, San Francisco, CA 94111
+        </p>
+        <p>
+          Privacy:{" "}
+          <a href="mailto:privacy@tomosolutions.ai">privacy@tomosolutions.ai</a>
+        </p>
+        <p>
+          Support:{" "}
+          <a href="mailto:support@tomosolutions.ai">support@tomosolutions.ai</a>
+        </p>
         <p>
           Website:{" "}
           <a href="https://tomosolutions.ai">https://tomosolutions.ai</a>
@@ -1537,14 +1183,14 @@ function PrivacyPage() {
 
         <h3>16.1 California (CCPA/CPRA)</h3>
         <p>
-          Categories of personal information we collect track Sections 2 and 6
+          Categories of personal information we collect track Sections 2 and 5
           (identifiers, commercial information, internet activity, professional
           information, and inferences used to personalise the Service). We
           collect this information for the business purposes in Section 3. We
           disclose personal information to service providers as described in
-          Section 6. We do not sell personal information or share it for
+          Section 5. We do not sell personal information or share it for
           cross-context behavioural advertising. California residents may
-          exercise rights via support@tomosolutions.ai. We will verify requests
+          exercise rights via privacy@tomosolutions.ai. We will verify requests
           as required by law. Authorised agents may submit requests with proof of
           authorisation.
         </p>
@@ -1553,8 +1199,8 @@ function PrivacyPage() {
         <p>
           Additional detail on lawful bases, transfers, retention, and
           processor/controller roles appears above. Customers requiring a signed
-          DPA should contact support@tomosolutions.ai before enabling mailbox or
-          CRM ingestion.
+          DPA should contact privacy@tomosolutions.ai or support@tomosolutions.ai
+          before enabling mailbox or CRM ingestion.
         </p>
       </div>
     </LegalChrome>
