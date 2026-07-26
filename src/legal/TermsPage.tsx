@@ -1,0 +1,236 @@
+import { Link } from "react-router-dom";
+import { LegalChrome, LEGAL_DOC_PROSE } from "./LegalChrome";
+
+export function TermsPage() {
+  return (
+    <LegalChrome
+      title="Terms of Service"
+      metaAfterTitle={
+        <>
+          <p className="mt-4 text-[#4A5766]">
+            Effective date: 23 July 2026 · Version 1.0
+          </p>
+          <p className="mt-2 text-[#4A5766]">
+            Entity: Tomo Solutions Inc., a Delaware corporation (“Tomo”, “we”,
+            “us”)
+          </p>
+          <p className="mt-1 text-[#4A5766]">
+            Product: Tomo application, tomosolutions.ai, and related services
+            (the “Service”)
+          </p>
+        </>
+      }
+    >
+      <div className={LEGAL_DOC_PROSE}>
+        <h2>1. Agreement to terms</h2>
+        <p>
+          These Terms of Service (“Terms”) are a binding agreement between you
+          and Tomo Solutions Inc. (“Tomo”, “we”, “us”), governing your access to
+          and use of the Tomo application, tomosolutions.ai, and related services
+          (the “Service”). By creating an account or using the Service, you agree
+          to these Terms and to our <Link to="/privacy">Privacy Policy</Link>. If
+          you use the Service on behalf of an organization, you represent that
+          you are authorized to bind that organization.
+        </p>
+
+        <h2>2. Definitions</h2>
+        <ul>
+          <li>
+            <strong>“Customer Data”</strong> — data you submit to or authorize
+            the Service to access, including data obtained from connected Google
+            and Microsoft accounts.
+          </li>
+          <li>
+            <strong>“Connected Account”</strong> — a Google or Microsoft account
+            you authorize Tomo to access via OAuth.
+          </li>
+          <li>
+            <strong>“AI Features”</strong> — features that use artificial
+            intelligence to generate drafts or insights.
+          </li>
+        </ul>
+
+        <h2>3. Eligibility and accounts</h2>
+        <p>
+          You must be at least 18 and capable of forming a binding contract. You
+          are responsible for the security of your account credentials and for
+          all activity under your account. You must provide accurate information
+          and keep it current.
+        </p>
+
+        <h2>4. The Service</h2>
+        <p>
+          Tomo provides relationship-intelligence features for fund managers,
+          including email and calendar analysis, relationship signals and
+          metrics, reminders, meeting context, search, lists, workflows, and
+          AI-assisted drafting. We may modify or improve the Service over time.
+        </p>
+
+        <h2>5. Third-party integrations (Google &amp; Microsoft)</h2>
+        <h3>a. Your authorization</h3>
+        <p>
+          When you connect a Google or Microsoft account, you authorize Tomo to
+          access the data covered by the scopes you approve, solely to provide
+          the Service.
+        </p>
+        <h3>b. Compliance with provider terms</h3>
+        <p>
+          Tomo’s use of information received from Google APIs adheres to the{" "}
+          <a
+            href="https://developers.google.com/terms/api-services-user-data-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google API Services User Data Policy
+          </a>
+          , including the Limited Use requirements. Tomo’s use of Microsoft Graph
+          data adheres to the Microsoft APIs Terms of Use. Details of how we
+          handle this data are in our{" "}
+          <Link to="/privacy">Privacy Policy</Link>.
+        </p>
+        <h3>c. Your responsibilities</h3>
+        <p>
+          You are responsible for ensuring you have the right to connect the
+          relevant accounts and to allow Tomo to process the associated data, and
+          for complying with your own organization’s policies and applicable law.
+        </p>
+        <h3>d. Provider changes</h3>
+        <p>
+          Google and Microsoft may change or discontinue their APIs; we are not
+          liable for resulting changes to the Service.
+        </p>
+
+        <h2>6. Acceptable use</h2>
+        <p>You will not, and will not permit others to:</p>
+        <ul>
+          <li>
+            use the Service unlawfully or in violation of Google, Microsoft, or
+            other provider terms;
+          </li>
+          <li>
+            access data you are not authorized to access, or attempt to breach
+            tenant isolation or security controls;
+          </li>
+          <li>reverse engineer, scrape, or overload the Service;</li>
+          <li>
+            use the Service to send spam or unlawful communications; or
+          </li>
+          <li>upload malware or infringe others’ rights.</li>
+        </ul>
+
+        <h2>7. Customer Data and privacy</h2>
+        <p>
+          As between you and Tomo, you retain all rights to Customer Data. You
+          grant Tomo a limited license to process Customer Data solely to provide
+          and secure the Service. Our processing of personal data is described in
+          the <Link to="/privacy">Privacy Policy</Link>, which is incorporated
+          into these Terms. We do not sell Customer Data and do not use Customer
+          Data (including Google or Microsoft data) to train generalized or
+          general-purpose AI models.
+        </p>
+
+        <h2>8. AI Features</h2>
+        <p>
+          AI Features generate draft content and insights for your review. All
+          AI-generated communications are proposal-only and are never sent
+          without your explicit, per-message approval. AI output may contain
+          errors; you are responsible for reviewing it before acting. AI
+          processing is performed on an enterprise configuration with no
+          retention of your data for model training (see{" "}
+          <Link to="/privacy">Privacy Policy</Link>, Section 6).
+        </p>
+
+        <h2>9. Intellectual property</h2>
+        <p>
+          The Service, including its software, design, and content (excluding
+          Customer Data), is owned by Tomo and its licensors and is protected by
+          intellectual-property laws. These Terms grant you a limited,
+          non-exclusive, non-transferable right to use the Service. Feedback you
+          provide may be used by us without obligation to you.
+        </p>
+
+        <h2>10. Fees</h2>
+        <p>
+          If the Service is offered on a paid basis, applicable fees, billing
+          terms, and refund policy will be presented at purchase and form part of
+          these Terms. Where the Service is provided at no charge, we may change
+          or discontinue it at our discretion.
+        </p>
+
+        <h2>11. Confidentiality</h2>
+        <p>
+          Each party will protect the other’s confidential information with
+          reasonable care and use it only to perform under these Terms.
+        </p>
+
+        <h2>12. Disclaimers</h2>
+        <p>
+          The Service is provided “as is” and “as available.” To the maximum
+          extent permitted by law, Tomo disclaims all warranties, express or
+          implied, including merchantability, fitness for a particular purpose,
+          and non-infringement. Tomo does not warrant that the Service will be
+          uninterrupted, error-free, or secure against all threats.
+        </p>
+
+        <h2>13. Limitation of liability</h2>
+        <p>
+          To the maximum extent permitted by law, Tomo will not be liable for
+          indirect, incidental, special, consequential, or punitive damages, or
+          for lost profits, revenues, or data. Tomo’s total aggregate liability
+          arising out of or relating to the Service will not exceed the greater
+          of the amounts you paid to Tomo in the 12 months before the claim, or
+          USD 100.
+        </p>
+
+        <h2>14. Indemnification</h2>
+        <p>
+          You will indemnify and hold Tomo harmless from claims arising out of
+          your Customer Data, your use of the Service in violation of these Terms
+          or applicable law, or your violation of any third-party rights or
+          provider terms.
+        </p>
+
+        <h2>15. Term, termination, and data deletion</h2>
+        <p>
+          These Terms apply while you use the Service. You may stop using and
+          delete your account at any time (
+          <Link to="/privacy">Privacy Policy</Link>, Section 10). We may suspend
+          or terminate access for material breach, legal requirement, or risk to
+          the Service. On termination, we revoke Connected Account tokens and
+          delete Customer Data in accordance with the Privacy Policy (including
+          the 30-day deletion process).
+        </p>
+
+        <h2>16. Changes to these Terms</h2>
+        <p>
+          We may update these Terms from time to time. Material changes will be
+          posted here with a revised effective date; continued use after changes
+          take effect constitutes acceptance.
+        </p>
+
+        <h2>17. Governing law and disputes</h2>
+        <p>
+          These Terms are governed by the laws of the State of Delaware, USA,
+          without regard to conflict-of-laws rules. The courts of the State of
+          Delaware, USA will have exclusive jurisdiction, except where mandatory
+          local law provides otherwise.
+        </p>
+
+        <h2>18. Contact</h2>
+        <p>
+          Tomo Solutions Inc. Email:{" "}
+          <a href="mailto:privacy@tomosolutions.ai">privacy@tomosolutions.ai</a>
+          . For general support:{" "}
+          <a href="mailto:support@tomosolutions.ai">support@tomosolutions.ai</a>
+          . Address: 1 Ferry Building, Suite 201, San Francisco, CA 94111.
+        </p>
+        <p>
+          These Terms are designed to be consistent with the Google API Services
+          User Data Policy (including Limited Use), the Microsoft APIs Terms of
+          Use, and to support SOC 2 and data-protection obligations. They
+          incorporate the Tomo Privacy Policy by reference.
+        </p>
+      </div>
+    </LegalChrome>
+  );
+}

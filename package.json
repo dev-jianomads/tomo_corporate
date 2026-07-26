@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "sync:static": "cp assets/home.html public/home.html && cp assets/journal-fat-middle.html public/journal-fat-middle.html && cp assets/journal-signals.html public/journal-signals.html && cp assets/journal-momentum.html public/journal-momentum.html",
+    "export:legal": "node scripts/export-legal-html.mjs",
+    "sync:static": "npm run export:legal && cp assets/home.html public/home.html && cp assets/journal-fat-middle.html public/journal-fat-middle.html && cp assets/journal-signals.html public/journal-signals.html && cp assets/journal-momentum.html public/journal-momentum.html && mkdir -p public/privacy public/terms && cp assets/privacy.html public/privacy/index.html && cp assets/terms.html public/terms/index.html",
     "predev": "npm run sync:static",
     "prebuild": "npm run sync:static",
     "dev": "vite",
