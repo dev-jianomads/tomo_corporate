@@ -9,7 +9,7 @@
       "destination": "/terms/index.html"
     },
     {
-      "source": "/((?!api/|privacy(?:/|$)|terms(?:/|$)).*)",
+      "source": "/((?!api/|\\.well-known(?:/|$)|privacy(?:/|$)|terms(?:/|$)).*)",
       "destination": "/index.html"
     }
   ]
