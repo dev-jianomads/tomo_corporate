@@ -32,8 +32,8 @@ a{color:inherit}
 .nav-inner{max-width:80rem;margin:0 auto;padding:0 1rem;height:4rem;display:flex;align-items:center;justify-content:space-between}
 @media(min-width:640px){.nav-inner{padding:0 1.5rem}}
 @media(min-width:1024px){.nav-inner{padding:0 2rem}}
-.logo{font-family:var(--logo);font-size:22px;font-weight:500;letter-spacing:-.03em;text-decoration:none;color:var(--ink)}
-.logo .dot{color:var(--amber)}
+.logo{display:flex;align-items:center;text-decoration:none;line-height:0}
+.logo img{height:32px;width:auto;display:block}
 .nav-home{font-size:13.5px;color:var(--ink-quiet);text-decoration:none}
 .nav-home:hover{color:var(--ink)}
 main{padding:4rem 0 5rem}
@@ -68,7 +68,7 @@ footer{border-top:1px solid rgba(215,206,184,.6)}
 <body>
 <header class="nav">
   <div class="nav-inner">
-    <a class="logo" href="/home.html">tomo<span class="dot">.</span></a>
+    <a class="logo" href="/home.html"><img src="/tomo-raise-black.png" alt="tomo.raise"></a>
     <a class="nav-home" href="/home.html">Home</a>
   </div>
 </header>

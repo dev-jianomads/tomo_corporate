@@ -16,11 +16,8 @@ export function LegalChrome({
     <div className="min-h-dvh bg-[#FBF8F1] font-tomo text-[#0E141B] antialiased">
       <header className="sticky top-0 z-30 border-b border-[#D7CEB8]/60 bg-[#FBF8F1]/92 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <a
-            href="/home.html"
-            className="font-tomo-logo text-[22px] font-medium tracking-[-0.03em] text-[#0E141B] no-underline"
-          >
-            tomo<span className="text-[#C9933A]">.</span>
+          <a href="/home.html" className="inline-flex items-center no-underline">
+            <img src="/tomo-raise-black.png" alt="tomo.raise" className="block h-8 w-auto" />
           </a>
           <a
             href="/home.html"

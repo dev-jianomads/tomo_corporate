@@ -63,12 +63,8 @@ body{
   max-width:1320px;margin:0 auto;padding:20px 40px;
   display:flex;align-items:center;justify-content:space-between;
 }
-.nav-logo{
-  font-family:var(--logo);font-variation-settings:"opsz" 72;
-  font-weight:500;font-size:22px;letter-spacing:-0.03em;
-  color:var(--ink);display:flex;align-items:baseline;
-}
-.nav-logo .dot{color:var(--amber);}
+.nav-logo{display:flex;align-items:center;}
+.nav-logo img{height:32px;width:auto;display:block;}
 .nav-links{display:flex;align-items:center;gap:36px;}
 html{scroll-behavior:smooth;}
 
@@ -1008,11 +1004,8 @@ a.btn-primary{text-decoration:none;}
   display:flex;justify-content:space-between;align-items:center;
   flex-wrap:wrap;gap:20px;
 }
-.foot-logo{
-  font-family:var(--logo);font-variation-settings:"opsz" 72;
-  font-size:20px;font-weight:500;letter-spacing:-0.03em;color:var(--ivory);
-}
-.foot-logo .dot{color:var(--amber);}
+.foot-logo{display:flex;align-items:center;}
+.foot-logo img{height:28px;width:auto;display:block;}
 .foot-links{display:flex;gap:28px;flex-wrap:wrap;}
 .foot-l{font-size:12px;color:var(--cream-whisp);cursor:pointer;transition:color 180ms;}
 .foot-l:hover{color:var(--ivory);}
@@ -1177,7 +1170,7 @@ a.btn-primary{text-decoration:none;}
 <!-- ============ NAV ============ -->
 <nav class="nav">
   <div class="nav-inner">
-    <div class="nav-logo">tomo<span class="dot">.</span></div>
+    <div class="nav-logo"><img src="/tomo-raise-black.png" alt="tomo.raise"></div>
     <div class="nav-links">
       <span class="nav-l"><a href="#proposition" style="color:inherit;text-decoration:none;">Product</a></span>
       <span class="nav-l"><a href="#security" style="color:inherit;text-decoration:none;">Security</a></span>
@@ -1643,7 +1636,7 @@ a.btn-primary{text-decoration:none;}
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="foot-inner">
-    <div class="foot-logo">tomo<span class="dot">.</span></div>
+    <div class="foot-logo"><img src="/tomo-raise-cream.png" alt="tomo.raise"></div>
     <div class="foot-links">
       <a class="foot-l" href="#proposition" style="color:inherit;text-decoration:none;">Product</a>
       <a class="foot-l" href="#security" style="color:inherit;text-decoration:none;">Security</a>
