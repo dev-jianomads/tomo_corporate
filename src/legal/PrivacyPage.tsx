@@ -8,7 +8,7 @@ export function PrivacyPage() {
       metaAfterTitle={
         <>
           <p className="mt-4 text-[#4A5766]">
-            Effective date: 23 July 2026 · Version 1.0
+            Effective date: 26 November 2026 · Version 1.1
           </p>
           <p className="mt-2 text-[#4A5766]">
             Entity: Tomo Solutions Inc., a Delaware corporation (“Tomo
@@ -58,7 +58,7 @@ export function PrivacyPage() {
         </ul>
         <p>
           It does <strong>not</strong> cover third-party websites or services you
-          connect (Microsoft, Google, CRM vendors, Slack, Stripe, etc.), which
+          connect (Microsoft, Google, CRM vendors, etc.), which
           have their own policies.
         </p>
 
@@ -191,16 +191,12 @@ export function PrivacyPage() {
         </ul>
 
         <h3>2.6 Billing</h3>
-        <ul>
-          <li>
-            Billing name, email, organisation details, plan, invoices, and
-            limited payment metadata from our payment processor.
-          </li>
-          <li>
-            We do <strong>not</strong> store full payment card numbers; card data
-            is handled by our payment processor (for example Stripe).
-          </li>
-        </ul>
+        <p>
+          Tomo does not currently charge customers or collect payment card data.
+          If we introduce paid plans, card data will be handled by a payment
+          processor and we will update this policy and our sub-processor list
+          first.
+        </p>
 
         <h3>2.7 Communications with us</h3>
         <ul>
@@ -232,12 +228,11 @@ export function PrivacyPage() {
             generate drafts and other AI outputs for{" "}
             <strong>your review and approval</strong>;
           </li>
-          <li>
-            send service notifications (in-app, email, and optional Slack);
-          </li>
+          <li>send service notifications (in-app and email);</li>
           <li>personalise drafting tone for your user/workspace;</li>
-          <li>prevent abuse, debug issues, and maintain availability;</li>
-          <li>process payments and prevent fraud;</li>
+          <li>
+            prevent abuse and fraud, debug issues, and maintain availability;
+          </li>
           <li>comply with law and enforce our Terms; and</li>
           <li>
             communicate product updates or marketing where permitted (you may
@@ -339,8 +334,7 @@ export function PrivacyPage() {
               <tr>
                 <td>Amazon Web Services (AWS)</td>
                 <td>
-                  Workers, queues, object storage, secrets, transactional email
-                  (if used)
+                  Workers, queues, object storage, secrets, logging
                 </td>
                 <td>Workspace and operational data</td>
               </tr>
@@ -371,29 +365,29 @@ export function PrivacyPage() {
                 </td>
               </tr>
               <tr>
-                <td>Stripe</td>
-                <td>Billing</td>
-                <td>Customer billing details</td>
-              </tr>
-              <tr>
-                <td>Postmark and/or AWS SES</td>
+                <td>Postmark</td>
                 <td>Transactional product email</td>
                 <td>Recipient email + message content</td>
               </tr>
               <tr>
-                <td>Slack</td>
-                <td>Optional daily brief / notifications</td>
-                <td>Content you enable to send to Slack</td>
-              </tr>
-              <tr>
-                <td>Sentry (or similar)</td>
+                <td>Sentry</td>
                 <td>Error monitoring</td>
                 <td>Stack traces; configured to limit PII</td>
               </tr>
               <tr>
-                <td>PostHog, Vercel Analytics, or similar</td>
+                <td>PostHog</td>
                 <td>Product analytics</td>
                 <td>Pseudonymous usage events, workspace IDs</td>
+              </tr>
+              <tr>
+                <td>Honeycomb</td>
+                <td>Observability (application traces)</td>
+                <td>Trace data; may include user identifiers</td>
+              </tr>
+              <tr>
+                <td>Upstash</td>
+                <td>Rate limiting and scheduled jobs</td>
+                <td>Rate-limit counters and scheduled job payloads</td>
               </tr>
               <tr>
                 <td>Affinity / Backstop (optional)</td>
@@ -408,6 +402,11 @@ export function PrivacyPage() {
           provide <strong>at least 30 days’ notice</strong> before adding a new
           sub-processor that processes Customer Content, except for urgent
           security replacements.
+        </p>
+        <p>
+          Updated 26 November 2026: we added Honeycomb and Upstash, which were
+          already in use, and removed Stripe, Slack and AWS SES, which Tomo does
+          not use.
         </p>
 
         <h3>5.2 Integrations you enable</h3>
@@ -625,9 +624,12 @@ export function PrivacyPage() {
                 </td>
               </tr>
               <tr>
-                <td>Email/interaction metadata (without full body)</td>
+                <td>Email/interaction message records (without full body)</td>
                 <td>
-                  Up to about <strong>36 months</strong>, then deleted
+                  Up to about <strong>36 months</strong> from the message date,
+                  then deleted. Thread subjects and participant email addresses
+                  are not purged by age; they are kept until the account or
+                  workspace is deleted.
                 </td>
               </tr>
               <tr>
@@ -678,7 +680,10 @@ export function PrivacyPage() {
               </tr>
               <tr>
                 <td>Billing records</td>
-                <td>As required for tax and accounting</td>
+                <td>
+                  None at present, because Tomo does not charge customers. If
+                  paid plans are introduced: as required for tax and accounting
+                </td>
               </tr>
             </tbody>
           </table>
@@ -733,7 +738,7 @@ export function PrivacyPage() {
         <ul>
           <li>access and update profile and workspace settings;</li>
           <li>connect or disconnect integrations;</li>
-          <li>control notification channels (including Slack opt-in);</li>
+          <li>control notification channels;</li>
           <li>
             export workspace data (where the export feature is enabled); and
           </li>
