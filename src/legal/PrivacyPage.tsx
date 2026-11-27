@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { LegalChrome, LEGAL_DOC_PROSE } from "./LegalChrome";
 
+// Privacy Policy v1.1, effective 26 November 2026.
 export function PrivacyPage() {
   return (
     <LegalChrome
